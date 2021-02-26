@@ -1,2 +1,2 @@
 # BitHASH
-Network Analysis and Analytical Data
+Blockchain Network Analysis and Analytical Data

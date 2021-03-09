@@ -60,3 +60,4 @@ OKEx
 Kraken
 Huobi Global
 Bitfinex
+Crypto.com 

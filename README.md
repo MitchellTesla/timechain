@@ -1,5 +1,5 @@
 # BitHASH-API
-Live Blockchain Network Analysis API Dashboard integration
+Live Blockchain Network Analysis API Dashboard integration for Bitcoin.
 
 for easy access use livebitcoindata.com
 

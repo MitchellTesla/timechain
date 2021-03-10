@@ -1,2 +1,2 @@
-# BitHASH
-Blockchain Network Analysis
+# BitHASH-API
+Live Blockchain Network Analysis Dashboard 

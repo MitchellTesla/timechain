@@ -1,0 +1,1541 @@
+<!doctype html>
+<html class="no-js darkmode" lang="">
+<head>
+<meta charset="utf-8">
+<title>Live Bitcoin Price Data Dashboard</title>
+<meta http-equiv="refresh" content="3600;url=https://livebitcoindata.com/" />
+<meta name="description" content="Live Bitcoin price dashboard with real-time BTC quotes and trades, Bitcoin price world map, calculator, market-cap heatmap, 24-hour charts, news and more. Bookmark this page!">
+<meta name="robots" content="follow, index" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Live Bitcoin Price Data">
+<meta property="og:description" content="Live Bitcoin price dashboard with real-time BTC quotes and trades, Bitcoin price world map, calculator, market-cap heatmap, 24-hour charts, news and more. Bookmark this page!">
+<meta property="og:url" content="https://LiveBitcoinData.com/dashboard">
+<meta property="og:image" content="https://livebitcoindata.com/img/twtr-live-bitcoin-data-2020.png">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Live Bitcoin Price Data" />
+<meta name="twitter:description" content="Live Bitcoin price dashboard with real-time BTC quotes and trades, Bitcoin price world map, calculator, market-cap heatmap, 24-hour charts, news and more. Bookmark this page!" />
+<meta name="twitter:image" content="https://livebitcoindata.com/img/twtr-card-summary-2020.png" />
+<meta name="twitter:creator" content="@LiveBitcoinData" />
+<meta name="twitter:site" content="@LiveBitcoinData" />
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="https://livebitcoindata.com/icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://livebitcoindata.com/css/main.css?ver=0.3.51">
+<link rel="stylesheet" type="text/css" href="https://livebitcoindata.com/lbdbtc/assets/css/style.css" />
+<link rel="stylesheet" href="https://livebitcoindata.com/css/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://livebitcoindata.com/js/main-head.js?ver=0.3.51"></script> 
+</head>
+<body>
+<div id="loader-wrapper">
+  <div id="loader-bitcoin">
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="180px" height="180px" viewBox="100 100 400 400" xml:space="preserve">
+      <filter id="dropshadow" height="130%">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+        <feOffset dx="0" dy="0" result="offsetblur"/>
+        <feFlood flood-color="red"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+          <feMergeNode/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+      <path class="path" style="filter:url(#dropshadow)" fill="#000000" d="M446.089,261.45c6.135-41.001-25.084-63.033-67.769-77.735l13.844-55.532l-33.801-8.424l-13.48,54.068
+    c-8.896-2.217-18.015-4.304-27.091-6.371l13.568-54.429l-33.776-8.424l-13.861,55.521c-7.354-1.676-14.575-3.328-21.587-5.073
+    l0.034-0.171l-46.617-11.64l-8.993,36.102c0,0,25.08,5.746,24.549,6.105c13.689,3.42,16.159,12.478,15.75,19.658L208.93,357.23
+    c-1.675,4.158-5.925,10.401-15.494,8.031c0.338,0.485-24.579-6.134-24.579-6.134l-9.631,40.468l36.843,9.188
+    c8.178,2.051,16.209,4.19,24.098,6.217l-13.978,56.17l33.764,8.424l13.852-55.571c9.235,2.499,18.186,4.813,26.948,6.995
+    l-13.802,55.309l33.801,8.424l13.994-56.061c57.648,10.902,100.998,6.502,119.237-45.627c14.705-41.979-0.731-66.193-31.06-81.984
+    C425.008,305.984,441.655,291.455,446.089,261.45z M368.859,369.754c-10.455,41.983-81.128,19.285-104.052,13.589l18.562-74.404
+    C306.28,314.65,379.774,325.975,368.859,369.754z M379.302,260.846c-9.527,38.187-68.358,18.781-87.442,14.023l16.828-67.489
+    C327.767,212.14,389.234,221.02,379.302,260.846z"/>
+    </svg>
+    <br/>
+    <br/>
+    <div id='trade'>
+        Receiving Bitcoin data...      </div>
+    <div class="plz-wait pulsate">Loading: &nbsp;Live bitcoin price dashboard...<br/><br/><i class="fa fa-hourglass-half" style="font-size:18px;"></i> &nbsp;&nbsp;Please wait...</div>
+  </div>  
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+<header id="lbd-site-header" class="lbd-header">
+  <div id="navbar"> <a href="https://livebitcoindata.com/" id="logo">Live<i id="btc-icn-1" class="fa fa-bitcoin" style="font-size:30px;color:#f7931a;"></i>itcoinData</a>
+    <div id="navbar-right" style="vertical-align:middle;"> <a id="myBtn01" target="_blank"><i class="fa fa-calculator" style="font-size:18px;"></i></a> <a id="myBtn02" target="_blank"><i class="fas fa-chart-line" style="font-size:20px;"></i></a> <a href="https://twitter.com/LiveBitcoinData" target="_blank"><i class="fa fa-twitter" style="font-size:24px;"></i></a>
+      <button id="darkToggle" class="navbutton"><span class="dark-only"><i class="fas fa-sun" style="font-size:20px;"></i></span><span class="light-only"><i class="fas fa-moon" style="font-size:20px;"></i></span></button>
+    </div>
+    <div id="navbar-right-mobile"><a href=""><i class="fas fa-bars"></i></a></div>
+      <!-- The Modals -->
+<div id="modal01" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close01">&times;</span><br/>
+        <h5 class="card-title-1">Bitcoin Calculator</h5>
+          <p class="subtitle-grey clearboth-2">Calculate bitcoin vs. different currencies</p>
+    </div>
+    <div class="modal-body">
+          <p class="lbd-wdgt">
+            <crypto-widget type="calculator" template="basic2" color="default" api="cryptocompare.com" realtime="true"></crypto-widget>
+          </p>
+
+    </div>
+    <div class="modal-footer">
+      <h6 class='footer-terms'><span style="font-size:0.75em;">LiveBitcoinData.com does not sell, exchange, transfer or promote any cryptocurrency. LiveBitcoinData.com does not promote or share any affiliate links to any coins, tokens, forks, ICOs, or exchanges of any kind. Prices are not guaranteed to be accurate. This content is for informational purposes only and does not constitute an offer to sell or the solicitation of an offer to sell or buy any security in any jurisdiction where such an offer or solicitation would be illegal. There is not enough information contained in this content to make an investment decision and any information contained herein should not be used as a basis for this purpose. Please complete your own comprehensive research before using or investing in any cryptocurrency.</span></h6>
+    </div>
+  </div>
+
+</div>
+      <!-- The Modals -->
+<div id="modal02" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content02">
+    <div class="modal-header">
+      <span class="close02">&times;</span><br/>
+        <h5 class="card-title-1">Bitcoin Chart</h5>
+          <p class="subtitle-grey clearboth-2">Powered by TradingView</p>
+    </div>
+    <div class="modal-body">
+          <div class="tradingview-widget-container">
+            <div id="tradingview_de545"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> 
+            <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": "100%",
+  "height": "650px",
+  "symbol": "KRAKEN:XBTUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "withdateranges": true,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "hotlist": true,
+  "calendar": true,
+  "studies": [
+    "BB@tv-basicstudies",
+    "MACD@tv-basicstudies",
+    "RSI@tv-basicstudies"
+  ],
+  "show_popup_button": true,
+  "popup_width": "1000",
+  "popup_height": "650",
+  "container_id": "tradingview_de545"
+}
+  );
+  </script> 
+          </div>
+          <div class="tradingview-widget-container-dark">
+            <div id="tradingview_de5453"></div>
+            <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "width": "100%",
+  "height": "650px",
+  "symbol": "KRAKEN:XBTUSD",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "withdateranges": true,
+  "hide_side_toolbar": false,
+  "allow_symbol_change": true,
+  "hotlist": true,
+  "calendar": true,
+  "studies": [
+    "BB@tv-basicstudies",
+    "MACD@tv-basicstudies",
+    "RSI@tv-basicstudies"
+  ],
+  "show_popup_button": true,
+  "popup_width": "1000",
+  "popup_height": "650",
+  "container_id": "tradingview_de5453"
+}
+  );
+  </script> 
+          </div>
+
+    </div>
+    <div class="modal-footer">
+      <h6 class='footer-terms'><span style="font-size:0.75em;">LiveBitcoinData.com does not sell, exchange, transfer or promote any cryptocurrency. LiveBitcoinData.com does not promote or share any affiliate links to any coins, tokens, forks, ICOs, or exchanges of any kind. Prices are not guaranteed to be accurate. This content is for informational purposes only and does not constitute an offer to sell or the solicitation of an offer to sell or buy any security in any jurisdiction where such an offer or solicitation would be illegal. There is not enough information contained in this content to make an investment decision and any information contained herein should not be used as a basis for this purpose. Please complete your own comprehensive research before using or investing in any cryptocurrency.</span></h6>
+    </div>
+  </div>
+
+</div>
+      
+  </div>
+</header>
+<wrapper id="lbd-site-content">
+      <section id="section-lbd-0" class="light-0">
+      <div class="grid-container-9 grid-content-center">
+        <div class="empty-surface gridder-1 grid-3-l">
+          <div class="subgrid-l"><i id="btc-icn-2" class="fa fa-bitcoin"></i></div>
+          <div class="subgrid-r">
+              <button class="btn-lbd-tooltip lbd-tooltip-btn" title="The datapoints and live bitcoin price visualizations on LiveBitcoinData.com are powered by data sourced from the top exchanges and market data providers, such as Coinbase, Kraken, Gemini, Bitstamp, CoinCap, BlockCypher, CryptoCompare, CoinGecko, Messari Crypto, Blockchain.info and more. LiveBitcoinData.com's 'Average Bitcoin Price' metric (seen in the browser tab, preloading screen, and under the header: 'Avg. Bitcoin Price') is calculated by averaging these datapoints. The gauge, world map, exchange quotes and other live data may be provided by CryptoCompare or CoinCap and is different than the 'Average Bitcoin Price' calculated by LiveBitcoinData.com. Bitcoin prices updated in real-time."><p class="overline-2">Avg. Bitcoin Price</p></button>
+            <p class="stats-1" id="hdr-btc-price-1"></p>
+            <span style="font-size:0.8em;color:#666666;">Change 24h
+            <crypto-widget type="inline" template="generic" color="default" assets="BTC~USD" markup="{change_pct_24h}" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+              </span></div>
+        </div>
+        <div class="empty-surface mobi-hide-0">
+          <p class="overline-4">Market Cap</p>
+          <p class="stats-2">$<crypto-widget type="inline" template="generic" color="default" assets="BTC~USD" markup="{market_cap}" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+        </div>
+        <div class="empty-surface mobi-hide-0">
+          <p class="overline-4">Volume 24h</p>
+          <p class="stats-2">$<crypto-widget type="inline" template="generic" color="default" assets="BTC~USD" markup="{total_volume_24h_to}" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+        </div>
+        <div class="empty-surface mobi-hide-1">
+          <p class="overline-4">Low 24h</p>
+          <p class="stats-2">$<crypto-widget type="inline" template="generic" color="default" assets="BTC~USD" markup="{low_24h}" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+          </div>
+        <div class="empty-surface mobi-hide-2">
+          <p class="overline-4">High 24h</p>
+          <p class="stats-2">$<crypto-widget type="inline" template="generic" color="default" assets="BTC~USD" markup="{high_24h}" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+        </div>
+        <div class="empty-surface mobi-hide-3">
+          <p class="overline-4">Today's Open</p>
+          <p class="stats-2">$<crypto-widget type="inline" template="generic" color="default" assets="BTC~USD" markup="{open}" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+          </div>
+        <div class="empty-surface mobi-hide-4">
+          <p class="overline-4">$ Change 24h</p>
+          <p class="stats-2">$<crypto-widget type="inline" template="generic" color="default" assets="BTC~USD" markup="{change_abs_24h}" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+        </div>
+        <div class="empty-surface mobi-hide-5">
+          <p class="overline-4" style="font-size:0.6em !important;text-align:center;color:grey;">CryptoCompare Price</p>
+          <p class="stats-2">
+            <crypto-widget type="gauge" template="basic" color="default" assets="BTC~USD" api="cryptocompare.com" realtime="true"></crypto-widget>
+          </p>
+        </div>
+      </div>
+    </section>
+  <div class="tab" style="margin-bottom:10px;">
+    <button class="tablinks" onclick="tabSwitcher(event, 'Dashboard')" id="defaultOpen">Dashboard</button>
+    <!-- <button class="tablinks" onclick="tabSwitcher(event, 'Economics')">Economics</button>
+    <button class="tablinks" onclick="tabSwitcher(event, 'Mining')">Mining</button> -->
+    <button class="tablinks" onclick="tabSwitcher(event, 'News')">News</button>
+    <a href="https://livebitcoindata.com/chart"><button class="tablinks">Charts</button></a>
+    <a href="https://livebitcoindata.com/calculator"><button class="tablinks">Calculator</button></a>
+    <!-- <button class="tablinks" onclick="tabSwitcher(event, 'Chart')" id="tab_calc">Chart</button> -->
+  </div>
+  <div id="Dashboard" class="tabcontent">
+    <section id="section-lbd-1" class="light-0 alphaomega-0">
+    <p class="overline-7">KEY BITCOIN STATS</p>
+      <div class="grid-container-3">
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The count of new blocks added to the blockchain in the last 24 hours.">Blocks Added (last 24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">155 New Blocks</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Count of Unconfirmed Transactions. Every bitcoin transaction that's sent flows into what's called the mempool (short for memory pool) before it can be confirmed by miners. When there's a dramatic spike in transaction activity, the mempool can become congested because so many transactions are waiting to be included in the next block. Bitcoin users across the network may notice their transactions sit as unconfirmed or pending for a longer period of time, and we understand this can cause users to be concerned about the status of their funds. In most cases, your transactions will eventually confirm. It may just take longer than usual to do so.">Unconfirmed TXs - Count</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">55,679 TXs</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The aggregate size in bytes of transactions waiting to be confirmed.">Mempool Size</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">183,027,444 Bytes</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin is a digital currency, a decentralized system which records transactions in a distributed ledger called a blockchain... A node is a computer connected to other computers which follows rules and shares information. A 'full node' is a computer in Bitcoin's peer-to-peer network which hosts and synchronises a copy of the entire Bitcoin blockchain. Nodes are essential for keeping a cryptocurrency network running.">Network Health</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10,296 Nodes Found</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated total amount of computing power backing the Bitcoin network. Mining hashrate is a key security metric. The more hashing (computing) power in the network, the greater its security and its overall resistance to attack. Although Bitcoin’s exact hashing power is unknown, it is possible to estimate it from the number of blocks being mined and the current block difficulty.">Bitcoin Hash Rate</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">164.8 EH/s</div>
+          </div>            
+          </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Block time defines the time it takes to mine a block. In bitcoin blockchain, there is an expected block time, and an average block time. In bitcoin, the expected block time is 10 minutes.">Target Block Time</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10.00 Minutes</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Actual block time in real-time.">Real Block Time</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10.13 Minutes</div>            
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The difficulty is a measure of how difficult it is to mine a Bitcoin block, or in more technical terms, to find a hash below a given target. A high difficulty means that it will take more computing power to mine the same number of blocks, making the network more secure against attacks.">Mining Difficulty</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">21,448,277,761,060</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated next Difficulty Adjustment based on current hash rate, real block time, and other factors">Predicted Next Diff.</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">22,266,704,048,671</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The 'Stock-to-flow' is a number that shows how many years, at the current production rate, are required to achieve the current stock. This is a theoretical indicator and somewhat controversial.">Stock-to-Flow (S2F)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">55:1</div>
+            </div>            
+          </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="New bitcoins are generated by a competitive and decentralized process called 'mining'. This process involves that individuals are rewarded by the network for their services. Bitcoin miners are processing transactions and securing the network using specialized hardware and are collecting new bitcoins in exchange.">24h Mining Rev. (BTC)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1,060.47593738 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="24h Mining revenue measured in USD">24h Mining Rev. (USD)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$55,569,052.65</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The median transaction value over the past 24hrs in USD">Median TX Value (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$185.663119 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The value in USD of the median fee paid to miners in the previous 24hr period">Median TX Fee (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$7.533556 USD</div>            
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Average Bitcoin transfer value">24h Avg. Transfer (USD)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$32,039.41 USD</div>
+            </div>            
+          </div>
+        </div>
+      <div class="grid-container-3">
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Interactive BTC Price Chart</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-area-chart" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Historical Bitcoin data (5y max)</p>
+          <crypto-widget type="chart" template="multi-period" color="grey" assets="BTC~USD" period="24h" axes="true" cursor="true" api="cryptocompare.com" realtime="false"></crypto-widget>
+        </div>
+        <div class="lbd-surface-1 box grid-3-m2" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Live Exchange Quotes</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-receipt" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">Latest Bitcoin price quoted by global exchanges</p>
+          <crypto-widget type="table-quotes" template="basic" color="default" assets="BTC~USD,BTC~EUR,BTC~GBP,BTC~CAD,BTC~AUD,BTC~JPY,BTC~CNY" fields="asset,price,change_abs_24h,change_pct_24h,market_cap,last_market" display_header="true" display_chart="false" pagination="false" rows_per_page="5" sort_field="asset" sort_direction="desc" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen" markups="{name},{name},{name},{name}" urls=",,,"></crypto-widget>
+        </div>
+      </div>
+    </section>
+    <section id="section-lbd-2" class="light-0 alpha-0">
+        <div class="grid-container-5">
+            <div class="lbd-surface-1 box grid-3-l" draggable="false">
+      <div class="l-float-l">
+        <h5 class="card-title-1">What is Bitcoin?</h5>
+      </div>
+      <div class="r-float-r">
+        <p class="card-icn-1"><i class="fa fa-question-circle" style="font-size:22px;"></i></p>
+      </div>
+      <p class="subtitle-grey clearboth-2">A peer-to-peer electronic cash system</p>
+                <p>Bitcoin is the first distributed consensus-based, censorship-resistant, permissionless, peer-to-peer payment settlement network with a provably scarce, programmable, native currency. Bitcoin (BTC), the native asset of the Bitcoin blockchain, is the world's first digital currency without a central bank or administrator. The Bitcoin network is an emergent decentralized monetary institution that exists through the interplay between full nodes, miners, and developers. It is set by a social contract that is created and opted into by the users of the network and hardened through game theory and cryptography. Bitcoin is the first, oldest, and largest cryptocurrency in the world.</p>
+            </div>
+            <div class="lbd-surface-1 box" draggable="false">
+                <p class="img-btc-coin"><a href="https://en.wikipedia.org/wiki/Bitcoin" target="_blank" rel="nofollow"><img src="https://livebitcoindata.com/img/img-11d.png" /></a></p>
+            </div>
+        <div class="lbd-surface-1 box grid-3-r2" draggable="false">
+      <div class="l-float-l">
+        <h5 class="card-title-1">Satoshi Nakamoto Said...</h5>
+      </div>
+      <div class="r-float-r">
+        <p class="card-icn-1"><i class="fa fa-user-secret" style="font-size:22px;"></i></p>
+      </div>
+      <p class="subtitle-grey clearboth-2">Random quote from the creator(s) of Bitcoin</p>
+           <p class="textflex-1"><em>"When a node finds a proof-of-work, the new block is propagated throughout the network and everyone adds it to the chain and starts working on the next block after it. Any nodes that had the other transaction will stop trying to include it in a block, since it's now invalid according to the accepted chain."</em> <br/><br/>- Satoshi Nakamoto</p>
+    </div>
+        </div>
+      </section>
+    <section id="section-lbd-3" class="dark-0">
+    <p class="overline-7">LIVE BITCOIN PRICE DATA</p>
+      <div class="grid-container-3">
+        <div class="lbd-surface-1 grid-3-l">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin vs. the World</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-globe" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Bitcoin performance vs. global fiat currencies</p>
+          <p class="lbd-wdgt">
+            <crypto-widget type="geomap" template="generic" color="default" assets="BTC~AED,BTC~AFN,BTC~ALL,BTC~AMD,BTC~ANG,BTC~AOA,BTC~ARS,BTC~AUD,BTC~AWG,BTC~AZN,BTC~BAM,BTC~BBD,BTC~BDT,BTC~BGN,BTC~BHD,BTC~BIF,BTC~BMD,BTC~BND,BTC~BOB,BTC~BRL,BTC~BSD,BTC~BTN,BTC~BWP,BTC~BYN,BTC~BYR,BTC~BZD,BTC~CAD,BTC~CDF,BTC~CHF,BTC~CLF,BTC~CLP,BTC~CNY,BTC~COP,BTC~CRC,BTC~CUC,BTC~CUP,BTC~CVE,BTC~CZK,BTC~DJF,BTC~DKK,BTC~DOP,BTC~DZD,BTC~EGP,BTC~ERN,BTC~ETB,BTC~EUR,BTC~FJD,BTC~FKP,BTC~GBP,BTC~GEL,BTC~GHS,BTC~GIP,BTC~GMD,BTC~GNF,BTC~GTQ,BTC~GYD,BTC~HKD,BTC~HNL,BTC~HRK,BTC~HTG,BTC~HUF,BTC~IDR,BTC~ILS,BTC~INR,BTC~IQD,BTC~IRR,BTC~ISK,BTC~JMD,BTC~JOD,BTC~JPY,BTC~KES,BTC~KGS,BTC~KHR,BTC~KMF,BTC~KPW,BTC~KRW,BTC~KWD,BTC~KYD,BTC~KZT,BTC~LAK,BTC~LBP,BTC~LKR,BTC~LRD,BTC~LSL,BTC~LYD,BTC~MAD,BTC~MDL,BTC~MGA,BTC~MKD,BTC~MMK,BTC~MNT,BTC~MOP,BTC~MRO,BTC~MUR,BTC~MVR,BTC~MWK,BTC~MXN,BTC~MXV,BTC~MYR,BTC~MZN,BTC~NAD,BTC~NGN,BTC~NIO,BTC~NOK,BTC~NPR,BTC~NZD,BTC~OMR,BTC~PAB,BTC~PEN,BTC~PGK,BTC~PHP,BTC~PKR,BTC~PLN,BTC~PYG,BTC~QAR,BTC~RON,BTC~RSD,BTC~RUB,BTC~RWF,BTC~SAR,BTC~SBD,BTC~SCR,BTC~SDG,BTC~SEK,BTC~SGD,BTC~SHP,BTC~SLL,BTC~SOS,BTC~SRD,BTC~SSP,BTC~STD,BTC~SVC,BTC~SYP,BTC~SZL,BTC~THB,BTC~TJS,BTC~TMT,BTC~TND,BTC~TOP,BTC~TRY,BTC~TTD,BTC~TWD,BTC~TZS,BTC~UAH,BTC~UGX,BTC~USD,BTC~UYI,BTC~UYU,BTC~UZS,BTC~VEF,BTC~VND,BTC~VUV,BTC~WST,BTC~XAF,BTC~XCD,BTC~XOF,BTC~XPF,BTC~YER,BTC~ZAR,BTC~ZMW,BTC~ZWL" api="cryptocompare.com" realtime="false"></crypto-widget>
+          </p>
+        </div>
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Today</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-chart-line" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Today's BTC performance</p>
+          <p class="lbd-wdgt">
+            <crypto-widget type="card" template="chart6" color="default" assets="BTC~USD" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Calculator</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-calculator" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">Calculate bitcoin vs. different currencies</p>
+          <p class="lbd-wdgt">
+            <crypto-widget type="calculator" template="basic2" color="default" api="cryptocompare.com" realtime="true"></crypto-widget>
+          </p>
+        </div>
+      </div>
+              <div class="grid-container-6">
+        <div class="lbd-surface-1">
+          <p class="overline-4">All-Time High (ATH)</p>
+          <p class="stats-2">$58,641.00</p>
+        </div>
+        <div class="lbd-surface-1">
+          <p class="overline-4">% Change from ATH</p>
+          <p class="stats-2">-6.81%</p>
+        </div>
+        <div class="lbd-surface-1">
+          <p class="overline-4">Circulating Supply</p>
+          <p class="stats-2">18,649,556 BTC</p>
+        </div>
+        <div class="lbd-surface-1">
+          <p class="overline-4">Maximum Supply</p>
+          <p class="stats-2">20,999,999.97 BTC</p>
+        </div>
+        <div class="lbd-surface-1">
+          <p class="overline-4">% Already Mined</p>
+          <p class="stats-2">88.807%</p>
+        </div>
+        <div class="lbd-surface-1">
+          <p class="overline-4"># Left to Mine</p>
+          <p class="stats-2">2,350,444 BTC</p>
+        </div>
+      </div>
+    </section>
+    <section id="section-lbd-4" class="light-0 omega-0">
+    <p class="overline-7">LATEST BITCOIN STATISTICS</p>
+      <div class="grid-container-4 container">
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">BTC Blockchain</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-cube" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Basic stats: Bitcoin blockchain</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="A consensus mechanism is a fault-tolerant mechanism that is used in computer and blockchain systems to achieve the necessary agreement on a single data value or a single state of the network among distributed processes or multi-agent systems, such as with cryptocurrencies.">Consensus Mechanism</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">Proof-of-Work</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The count of days the Bitcoin blockchain has been online">Blockchain Age</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">4,443 Days</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The block height of a particular block is defined as the number of blocks preceding it in the blockchain. ... The total height of the blockchain is taken to be the height of the most recent block, or the highest block, in the chain. Block height is also calculated as the length of the blockchain minus one.">Current Block Height</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">673,931</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The count of new blocks added to the blockchain in the last 24 hours.">Blocks Added (last 24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">155 New Blocks</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Count of Unconfirmed Transactions. Every bitcoin transaction that's sent flows into what's called the mempool (short for memory pool) before it can be confirmed by miners. When there's a dramatic spike in transaction activity, the mempool can become congested because so many transactions are waiting to be included in the next block. Bitcoin users across the network may notice their transactions sit as unconfirmed or pending for a longer period of time, and we understand this can cause users to be concerned about the status of their funds. In most cases, your transactions will eventually confirm. It may just take longer than usual to do so.">Unconfirmed TXs - Count</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">55,679 TXs</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="BTC value of unconfirmed transactions">Unconfirmed TXs - Value</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">33,596.49 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total BTC fees to process all unconfirmed transactions">Unconfirmed TXs - Fees</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">7.6400 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The aggregate size in bytes of transactions waiting to be confirmed.">Mempool Size</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">183,027,444 Bytes</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total size of the Bitcoin blockchain in bytes.">Blockchain Size</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">3.32 GB</div>
+          </div>
+          <p class="card-btn-row">
+            <a href="https://www.investopedia.com/terms/b/blockchain.asp" target="_blank" rel="nofollow" title="Learn more about the Bitcoin blockchain on Investopedia.com." class="lbd-tooltip-btn"><button class="button button-2">Learn More</button></a>
+            <a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Network</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-bitcoin" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Information about the Bitcoin network</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="To provide some basic terms, a block explorer is a blockchain search engine that allows you to search for a particular piece of information on the blockchain. The activities carried out on crypto blockchains are known as transactions, which occur when cryptocurrencies are sent to and from wallet addresses.">Blockchain Explorer</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://live.blockcypher.com/btc/" target="_blank" rel="nofollow">BlockCypher</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="In the Bitcoin network, nodes fulfill a very important role. A node is a computer connected to other computers which follows rules and shares information. A 'full node' is a computer in Bitcoin's peer-to-peer network which hosts and synchronises a copy of the entire Bitcoin blockchain.">Nodes Found</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10,296</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Checks the Bitcoin blockchain uptime. Blockchain is a distributed database existing on multiple computers at the same time. It is constantly growing as new sets of recordings, or 'blocks', are added to it. Each block contains a timestamp and a link to the previous block, so they actually form a chain. Satoshi never mentioned 'blockchain,' however. Satoshi called it 'Timechain.'">Timechain Reachable?</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">Yes</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Checks for the presence of Bitcoin miners. Bitcoin mining is the process of creating new bitcoin by solving a computational puzzle. Bitcoin mining is necessary to maintain the ledger of transactions upon which bitcoin is based. Miners have become very sophisticated over the last several years using complex machinery to speed up mining operations.">Miners Active?</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">Yes</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Unique addresses in the Bitcoin ecosystem are payment addresses that have a non-zero balance. This metric is one way of understanding the daily use of the Bitcoin network. At times, the number of unique addresses tends to increase, and at other times it tends to decrease. This is affected by the following factors. Things that increase unique addresses: When fees are high, people leave their UTXOs in multiple addresses, because it costs too much to consolidate them... When the network is popular, more unique addresses are in use... As the Bitcoin network grows, in general there will be more unique addresses over time. Things that decrease unique addresses: When fees are low, people (or their wallets) will consolidate their funds into a single address... Batching reduces the number of unique addresses in use. More batching will decrease unique addresses and less batching will do the opposite... When the market tanks, less unique addresses are in use because people just aren't transacting as much (not as fun to speculate).">Unique Wallets Found</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">811,516,234</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="A Bitcoin address with a zero balance">Zero Balance Wallets</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">775,148,200</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="This indicator tracks CoinGecko's Bitcoin Sentiment UP Score as a percentage.">Sentiment Up Score</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">88.710% (CoinGecko)</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="This indicator tracks CoinGecko's Bitcoin Sentiment DOWN Score as a percentage.">Sentiment Down Score</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">11.290% (CoinGecko)</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="This metric is Bitcoin.org's Alexa Score. Alexa Score tracks the popularity of websites by traffic.">Bitcoin.org Web Rank</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">9,440 Alexa Score</div>
+          </div>
+          <p class="card-btn-row"><a href="https://bitcoin.org/en/" target="_blank" rel="nofollow" title="Learn more about the Bitcoin Network at Bitcoin.org" class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Market Data</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-coins" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Bitcoin exchange price data</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitstamp is a bitcoin exchange based in Luxembourg. It allows trading between USD currency and bitcoin cryptocurrency. It allows USD, EUR, bitcoin, XRP, ethereum, litecoin, or bitcoin cash deposits and withdrawals. The company was founded as a European-focused alternative to then-dominant bitcoin exchange Mt. Gox.">Bitstamp</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,602.00 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Coinbase is a digital currency exchange headquartered in San Francisco, California, United States. They broker exchanges of Bitcoin, Bitcoin Cash, Ethereum, Ethereum Classic, Litecoin, Tezos, and many others, with fiat currencies in approximately 32 countries, and bitcoin transactions and storage in 190 countries worldwide.">Coinbase</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,600.01 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Gemini Trust Company, LLC (Gemini) is a digital currency exchange and custodian that allows customers to buy, sell, and store digital assets. It is a New York trust company that is regulated by the New York State Department of Financial Services (NYDFS) and was founded in 2014 by Cameron and Tyler Winklevoss.">Gemini</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,613.10 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Kraken is a US-based cryptocurrency exchange, founded in 2011. The exchange provides cryptocurrency to fiat trading, and provides price information to Bloomberg Terminal. As of 2020, Kraken is available to residents of 48 U.S. states and 176 countries, and lists 40 cryptocurrencies available for trade.">Kraken</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,606.78 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The Volume Weighted Average Price (VWAP) is a trading benchmark used by traders that gives the average price a security has traded at throughout the day, based on both volume and price. It is important because it provides traders with insight into both the trend and value of a security.">24h VWAP</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,088.65 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Standard NVT Ratio is simply the Network Valuation divided by the Transaction Value flowing through the blockchain and then smoothed using a moving average.">24h NVT</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.00%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin NVT is calculated by dividing the Network Value (MCAP) by the the daily USD volume transmitted through the blockchain. NVT indicates whether bitcoin’s price is overvalued or undervalued. Bitcoin saw especially high NVT values during the early years and NVT is a sound indicator for revealing high speculative value. Similar P/E trends can be seen within early growing companies of traditional stock market.">24h Adjusted NVT</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">134.10%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Tracks 24hr MarketCap changes. Market capitalization is calculated by multiplying the total number of Bitcoins in circulation by the Bitcoin price.">24h MktCap Chng</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$22,151,841,202 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Last 24 hr Market Cap change as a precentage">24h MktCap Chng %</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">2.223%</div>
+          </div>
+          <p class="card-btn-row"><a href="https://www.investopedia.com/tech/how-to-buy-bitcoin/" target="_blank" rel="nofollow" title="Learn more about Bitcoin Markets at Investopedia.com" class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Transactions (24h)</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-exchange-alt" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Bitcoin transactions (last 24h)</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="A number that is defined as the number of unique “from” or “to” addresses used per day">Active Addresses (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1,164,249</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total count of Bitcoin transactions tracked in a 24 hour period">Total TX (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">294,249</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total count of Bitcoin transfers tracked in a 24 hour period">Total Transfers (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">860,982</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total count of Bitcoin payments tracked in a 24 hour period">Total Payments (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">860,982</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total Bitcoin transaction volume tracked over the last 24 hours">TX Volume (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$27,585,353,237.80</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total Bitcoin transaction fees over the last 24 hours (in USD)">Total USD Fees (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$4,777,864.21 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total Bitcoin transaction fees over the last 24 hours (in BTC)">Total BTC Fees (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">91.72593738 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Average Bitcoin transfer value">Avg. Transfer Value (USD)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$32,039.41 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Last Bitcoin transaction amount recorded on the Timechain">Last TX Amount</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.924524 BTC</div>
+          </div>
+          <p class="card-btn-row"><a href="https://www.blockchain.com/charts/n-transactions" target="_blank" rel="nofollow" title="Learn more about Bitcoin Transactions at Blockchain.com" class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Mining Info</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-gem" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Informative Datapoints: Bitcoin mining</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Genesis Block is the name of the first block of Bitcoin ever mined—thus called 'Genesis.' The Genesis Block forms the foundation of the entire Bitcoin trading system and is the prototype of all other blocks in the blockchain.">Genesis Block Date</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">3 January 2009</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The SHA-256 hash algorithm takes input blocks of 512 bits (i.e. 64 bytes), combines the data cryptographically, and generates a 256-bit (32 byte) output. The SHA-256 algorithm consists of a relatively simple round repeated 64 times.">Mining Algorithm</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">SHA-256</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Difficulty is a value used to show how hard is it to find a hash that will be lower than target defined by system. The Bitcoin network has a global block difficulty. Valid blocks must have a hash below this target. Mining pools also have a pool-specific share difficulty setting a lower limit for shares.">Difficulty</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">21,448,277,761,060</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Each block has what is known as a block size. The block size is simply the maximum limit a block can be filled up with transactions. For example, the Bitcoin block size currently stands at 1 MB. Miners can choose how much of a block to fill with transactions.">Block Size</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">217,869,500 Bytes</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The latest Bitcoin hash. A hash algorithm turns an arbitrarily-large amount of data into a fixed-length hash. ... Like all computer data, hashes are large numbers, and are usually written as hexadecimal. BitCoin uses the SHA-256 hash algorithm to generate verifiably 'random' numbers in a way that requires a predictable amount of CPU effort.">Latest Hash</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">00000000....05dda8f4</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The previous Bitcoin hash.">Previous Hash</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">00000000....73d71c18</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated total amount of computing power backing the Bitcoin network. Mining hashrate is a key security metric. The more hashing (computing) power in the network, the greater its security and its overall resistance to attack. Although Bitcoin’s exact hashing power is unknown, it is possible to estimate it from the number of blocks being mined and the current block difficulty.">Bitcoin Hash Rate</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">164.8 EH/s</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Block time defines the time it takes to mine a block. In bitcoin blockchain, there is an expected block time, and an average block time. In bitcoin, the expected block time is 10 minutes.">Target Block Time</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10.00 Minutes</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Actual block time in real-time.">Real Block Time</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10.13 Minutes</div>
+          </div>
+          <p class="card-btn-row"><a href="https://www.investopedia.com/terms/b/bitcoin-mining.asp" target="_blank" rel="nofollow" title="Learn more about Bitcoin Mining at Investopedia.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Mining Economy</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-cubes" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Mining and trading economics</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="A block reward refers to the number of bitcoins you get if you successfully mine a block of the currency. The amount of the reward halves every 210,000 blocks, or roughly every four years. The amount is expected to hit zero around 2140.">Current Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">6.250000 BTC/block</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total amount of miner rewards in USD">Miner Rewards (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$55,569,052.65 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total amount of Bitcoin transaction fees over the last 24 hours, measured in BTC">Total BTC Fees (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">91.72593738 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total amount of Bitcoin transaction fees over the last 24 hours, measured in USD">Total USD Fees (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$4,777,864.21 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin price normalized to supply">Normalized Supply Price</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$53,624.02 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The total number of mined bitcoin that are currently circulating on the network.">Circulating Supply</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">18,649,556 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total percentage of bitcoins which have already been distributed to the network">Percentage Issued</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">88.807%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The median transaction value over the past 24hrs in USD">Median TX Value (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$185.663119 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The value in USD of the median fee paid to miners in the previous 24hr period">Median TX Fee (24h)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$7.533556 USD</div>
+          </div>
+          <p class="card-btn-row"><a href="https://medium.com/@hassmccook/bitcoin-mining-economics-101-the-oversimplified-version-937fd8f95595" target="_blank" rel="nofollow" title="Learn more about Bitcoin Mining Economics at Medium.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Supply</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-parachute-box" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Distribution schedule and other details</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Blockchain analysts estimate that Nakamoto had mined about one million bitcoins (equivalent to 100,000,000,000,000 sats) before disappearing in 2010, when he handed the network alert key and control of the code repository over to Gavin Andresen.">Est. Satoshi Stack</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">~1 million bitcoins</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The 'Stock-to-flow' is a number that shows how many years, at the current production rate, are required to achieve the current stock. This is a theoretical indicator and somewhat controversial.">Stock-to-Flow (S2F)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">55:1</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Indicator showing Bitcoin's theoretical Stock-to-Flow price. This price might differ from actual exchange quotes and should only be considered for informational purposes.">Theoretical S2F Price</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$19,207.91</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total amount of bitcoins distributed to the network, represented as a percentage of the overall total supply.">Percentage Issued</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">88.807%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated date when 90% of the Bitcoin supply will have been mined.">90% Supply</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">8 December 2021</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated date when 95% of the Bitcoin supply will have been mined.">95% Supply</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">16 November 2025</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated date when 99% of the Bitcoin supply will have been mined.">99% Supply</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">6 January 2035</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated date when the last full Bitcoin will have been mined.">Last Full BTC to Mine</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">15 August 2104</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated year when all Bitcoin supply will have been mined.">All Bitcoins Issued</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">Between 2138 - 2140</div>
+          </div>
+          <p class="card-btn-row"><a href="https://www.investopedia.com/bitcoin-halving-4843769" target="_blank" rel="nofollow" title="Learn more about Bitcoin Supply at Investopedia.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Last Block</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-backward" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Analyzing the Bitcoin blockchain</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Volatility is a major factor in cryptocurrency trading but the real Bitcoin OGs know 1 BTC is always equal to 1 BTC... no matter what.">1 BTC = 1 Bitcoin?</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">
+              TRUE            </div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Each block contains a Unix time timestamp. In addition to serving as a source of variation for the block hash, they also make it more difficult for an adversary to manipulate the block chain. A timestamp is accepted as valid if it is greater than the median timestamp of previous 11 blocks, and less than the network-adjusted time + 2 hours. 'Network-adjusted time' is the median of the timestamps returned by all nodes connected to you. As a result block timestamps are not exactly accurate, and they do not need to be. Block times are accurate only to within an hour or two. Whenever a node connects to another node, it gets a UTC timestamp from it, and stores its offset from node-local UTC. The network-adjusted time is then the node-local UTC plus the median offset from all connected nodes. Network time is never adjusted more than 70 minutes from local system time, however. Bitcoin uses an unsigned integer for the timestamp, so the year 2038 problem is delayed for another 68 years.">Timestamp</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1615339002</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="A Block Hash is basically a reference number for a block in the blockchain. Each block header contains a version number, a timestamp, the hash used in the previous block, the hash of the Merkle Root, the nonce, and the target hash. The miner focuses on the nonce, a string of numbers. This number is appended to the hashed contents of the previous block, which is then hashed.">Hash</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">00000000....05dda8f4</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The block height of a particular block is defined as the number of blocks preceding it in the blockchain. A blockchain contains a series of blocks, hence the name blockchain. These blocks are essentially data units which are used to store transactional information of the network. The very first block on a blockchain is called the genesis block. It has a block height of zero, as no blocks precede it in the blockchain. The total height of the blockchain is taken to be the height of the most recent block, or the highest block, in the chain. Block height is also calculated as the length of the blockchain minus one. A block height chart is indicative of how steadily new blocks are being discovered on the blockchain as time passes, amid varying mining difficulty levels.">Block Height</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">673,930</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Count of Bitcoin transactions included in the last block.">Transactions</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">3,038</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Amount of incoming BTC included in the last block">BTC Input</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">720.08142021 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Amount of outgoing BTC included in the last block">BTC Output</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">726.33142021 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Block reward for solving the last block">BTC Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">6.250000 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Miner Pool who successfully solved the block, if identified">Miner Pool (if identified)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">Huobi.pool</div>
+          </div>
+          <p class="card-btn-row"><a href="https://en.bitcoin.it/wiki/Block" target="_blank" rel="nofollow" title="Learn more about Bitcoin blocks at Bitcoin Wiki." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+      </div>
+    </section>
+    <section id="section-lbd-5" class="light-0 alphaomega-0">
+      <div class="grid-container-3 container">
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Transactions Snapshot</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-camera" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Last 5 BTC TXs in chronological order (desc)</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><strong><button class="lbd-tooltip-btn" title="Every Bitcoin transaction comes with its own transaction ID (TXID), a string of letters and numbers that makes it unique. Most wallets and exchanges provide the TXID for you.">Transaction ID</button></strong></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><strong><span style="font-size:0.7em;">(Fees in BTC)</span> Output</strong></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#1 - f36e83.............a8c5bb</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(0.00055600)</span> 0.924524 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#2 - 2cc84b.............67b359</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(0.00497838)</span> 3.782340 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#3 - 26955c.............462f56</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(0.02455245)</span> 37.254812 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#4 - 6ab353.............13f855</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(0.00020472)</span> 0.000691 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#5 - 199667.............54b74f</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(0.00040142)</span> 8.936482 BTC</div>
+          </div>
+          <p class="card-btn-row"><a href="https://www.blockchain.com/explorer" target="_blank" rel="nofollow" title="Learn more about Bitcoin transactions at Blockchain.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Top 5 Mining Pools</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-trophy" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Top Bitcoin mining pools by Rewards</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><strong><button class="lbd-tooltip-btn" title="A mining pool is a group of miners who combine their computing power and split the mined bitcoin between participants. A disproportionately large number of blocks are mined by pools rather than by individual miners. Block Count refers to how many blocks a pool has solved, or mined.">Name <span style="font-size:0.7em;padding-left:10px;">(Block Count)</span></button></strong></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><strong><span style="font-size:0.7em;">(Fees Earned in BTC)</span> Rewards</strong></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#1 - F2Pool <span style="font-size:0.7em;padding-left:10px;">(61,632)</span></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(26,726)</span> 1,089,488 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#2 - BTC Guild <span style="font-size:0.7em;padding-left:10px;">(32,935)</span></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(6,555)</span> 1,004,175 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#3 - AntPool <span style="font-size:0.7em;padding-left:10px;">(53,489)</span></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(33,056)</span> 865,881 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#4 - SlushPool <span style="font-size:0.7em;padding-left:10px;">(61,632)</span></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(16,978)</span> 743,668 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#5 - GHash.IO <span style="font-size:0.7em;padding-left:10px;">(23,083)</span></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(2,478)</span> 576,650 BTC</div>
+          </div>
+          <p class="card-btn-row"><a href="https://www.blockchain.com/pools" target="_blank" rel="nofollow" title="Learn more about Bitcoin mining pools at Blockchain.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Top 5 Wallets</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-star" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Top Bitcoin wallets by Balance</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><strong><button class="lbd-tooltip-btn" title="A cryptocurrency wallet is a device, physical medium, program or a service which stores the public and/or private keys. In addition to this basic function of storing the keys, they more often also offer the functionality of encrypting and/or signing information. A Bitcoin address, or simply address, is an identifier of 26-35 alphanumeric characters, beginning with the number 1 , 3 or bc1 that represents a possible destination for a bitcoin payment.">Wallet Address</button></strong></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><strong><span style="font-size:0.7em;">(BTC Received | BTC Spent)</span> Balance</strong></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#1 &nbsp;- 34xp4v.............4Twseo</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(817,670 | 674,142)</span> 143,528 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#2 &nbsp;- 35hK24.............GqQPsP</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(255,502 | 114,051)</span> 141,452 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#3 &nbsp;- bc1qgd.............jwvw97</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(267,511 | 169,000)</span> 98,511 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#4 &nbsp;- 1P5ZED.............WKDfHQ</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(128,821 | 32,289)</span> 96,532 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">#5 &nbsp;- 37XuVS.............ktSKUs</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><span style="font-size:0.7em;padding-right:10px;">(94,506 | 0)</span> 94,506 BTC</div>
+          </div>
+          <p class="card-btn-row"><a href="https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html" target="_blank" rel="nofollow" title="Learn more about Bitcoin wallet distribution at BitInfoCharts.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+      </div>
+    </section>
+    <section id="section-lbd-6" class="light-0 alphaomega-0">
+      <div class="grid-container-4 container">
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Network Security</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-lock" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Protecting the Bitcoin blockchain</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The hash rate is the measuring unit of the processing power of the Bitcoin network. The Bitcoin network must make intensive mathematical operations for security purposes. When the network reached a hash rate of 10 Th/s, it meant it could make 10 trillion calculations per second.">Hash Rate</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">164.8 EH/s</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="New bitcoins are generated by a competitive and decentralized process called 'mining'. This process involves that individuals are rewarded by the network for their services. Bitcoin miners are processing transactions and securing the network using specialized hardware and are collecting new bitcoins in exchange.">24h Mining Rev. (BTC)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1,060.47593738 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="24h Mining revenue measured in USD">24h Mining Rev. (USD)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$55,569,052.65</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin dominance is described as the ratio between the market cap of Bitcoin to the rest of the cryptocurrency markets... For many years, while Bitcoin was far and away the largest cryptocurrency &ndash; and one of the few in existence &ndash; its dominance was much closer to 100% than it is today.">Bitcoin Dominance</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">59.936%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="This is the ratio of the current marketcap to the daily cost of attack. Underlying data sourced from NiceHash. In theory, it's more appealing to attack coins with higher-marketcaps per unit of cost an attacker might expend. This ratio captures that relationship. Higher numbers suggest attacks may be more appealing than for coins with lower Attack Appeal numbers.">Attack Appeal</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$17,801.76</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="This is the theoretical cost to rent enough hash-power on NiceHash right now to 51% the network for an hour. Data sourced from NiceHash. NiceHash is a market for crypto mining power, where users can buy or sell mining compute power. For some coins, it is possible, in theory, to rent enough hash-power on NiceHash to mount a 51% attack on the coin. For other coins, only a small fraction of the required 51% hashrate is available on NiceHash. This metric computes the cost, in theory, to 51%-attack the network for an hour by renting hash-power on NiceHash.">1-hr Attack Cost</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$2,427,119.19</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="A 51% attack is a potential attack on a blockchain network, where a single entity or organization is able to control the majority of the hash rate, potentially causing a network disruption. In such a scenario, the attacker would have enough mining power to intentionally exclude or modify the ordering of transactions. This metric tracks whether or not the Bitcoin network has been successfully 51% attacked.">Victim of 51% Attack?</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">
+              FALSE            </div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Double-spending is a potential flaw in a digital cash scheme in which the same single digital token can be spent more than once. Unlike physical cash, a digital token consists of a digital file that can be duplicated or falsified. This metric tracks whether or not the last Bitcoin transaction was double-spent somehow.">Last TX Double-Spent?</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">
+              FALSE            </div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin is a digital currency, a decentralized system which records transactions in a distributed ledger called a blockchain... A node is a computer connected to other computers which follows rules and shares information. A 'full node' is a computer in Bitcoin's peer-to-peer network which hosts and synchronises a copy of the entire Bitcoin blockchain. Nodes are essential for keeping a cryptocurrency network running.">Network Health</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10,296 Nodes Found</div>
+          </div>
+          <p class="card-btn-row"><a href="https://en.wikipedia.org/wiki/Bitcoin_network#Security" target="_blank" rel="nofollow" title="Learn more about Bitcoin network security at Wikipedia.org." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Difficulty Adjustment</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-sliders-h" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Stats: Bitcoin mining difficulty</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The difficulty is a measure of how difficult it is to mine a Bitcoin block, or in more technical terms, to find a hash below a given target. A high difficulty means that it will take more computing power to mine the same number of blocks, making the network more secure against attacks.">Mining Difficulty</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">21,448,277,761,060</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated next Difficulty Adjustment based on current hash rate, real block time, and other factors">Predicted Next Diff.</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">22,266,704,048,671</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin's difficulty is designed to adjust every 2016 blocks — or approximately every two weeks. This adjustment is based on changes in the network's hashrate, and occurs regularly in an attempt to ensure that the network continues to solve new blocks at a rate of one every 10 minutes.">Next adjustment</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">675,359</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Count of remaining blocks before the next Difficulty Adjustment">Blocks Until Retarget</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1,428</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated date of the next Difficulty Adjustment">Next Adjustment Date</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">19/Mar/2021 06:23:43</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The amount of blocks between Difficulty Adjustments">Diff. Adj. Schedule</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">Every 2016 Blocks</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The estimated number of days between Difficulty Adjustments">Diff. Adj Frequency</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">About 2 weeks</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The minimum difficulty value possible in the Bitcoin codebase">Min. Difficulty</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="This is a theoretical maximum difficulty value">Theoretical Max. Diff.</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">~2^224</div>
+          </div>
+          <p class="card-btn-row"><a href="https://en.bitcoin.it/wiki/Difficulty" target="_blank" rel="nofollow" title="Learn more about Bitcoin mining difficulty at Bitcoin Wiki." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Halving</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-cut" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Details about Bitcoin halvings</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Total amount of Bitcoins mined in a single day. This number is automatically halved every 210,000 blocks... or about every 4 years... in an event called a 'Bitcoin Halving.'">Bitcoins Mined/Day</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">900 BTC/day</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin Halving Countdown Timer... Countdown to the next Bitcoin Halving">Next Bitcoin Halving</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">
+              <div id="demo"></div>
+            </div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Number of blocks to go until the next Bitcoin Halving event. New blocks are mined roughly every 10 minutes.">Blocks to next halving</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">166,070</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Seconds remaining until the next Bitcoin Halving">Seconds to next halving</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">99,642,000</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated date of the next Bitcoin Halving">Est. date / next halving</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">10/May/2024 12:00:00</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Current block reward for successfully mining a Bitcoin block. This number is automatically halved every 210,000 blocks... or about every 4 years... in an event called a 'Bitcoin Halving.'">Current Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">6.25 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The number of bitcoins a miner who successfully mines a block will receive after the next Bitcoin Halving">Post-Halving Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">3.12 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Since we know Bitcoin's issuance over time, people can rely on programmed/controlled supply. This is helpful to understand what the current inflation rate of Bitcoin is, what the future inflation rate will be at a specific point in time, how many Bitcoins are in circulation and how many remain left to be mined.">Annual Inflation Rate</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1.80%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin Annual Inflation Rate after the next Bitcoin Halving">Post-Halving Infl. Rate</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.90%</div>
+          </div>
+          <p class="card-btn-row"><a href="https://www.bitcoinblockhalf.com/" target="_blank" rel="nofollow" title="Learn more about Bitcoin inflation at BitcoinBlockHalf.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Future Bitcoin Halvings</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-calendar-alt" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Track upcoming Bitcoin halving events</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2024, the reward drops from 6.25 BTC to 3.125 BTC per block.">2024 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">3.125 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2028, the reward drops from 3.125 BTC to 1.5625 BTC per block.">2028 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1.5625 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2032, the reward drops from 1.5625 BTC to 0.78125 BTC per block.">2032 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.78125 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2036, the reward drops from 0.78125 BTC to 0.390625 BTC per block.">2036 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.390625 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2040, the reward drops from 0.390625 BTC to 0.195313 BTC per block.">2040 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.195313 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2044, the reward drops from 0.195313 BTC to 0.097656 BTC per block.">2044 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.097656 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2048, the reward drops from 0.097656 BTC to 0.048828 BTC per block.">2048 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.048828 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2052, the reward drops from 0.048828 BTC to 0.024414 BTC per block.">2052 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.024414 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoins are created each time a user discovers a new block. The rate of block creation is adjusted every 2016 blocks to aim for a constant two week adjustment period (equivalent to 6 per hour). The number of bitcoins generated per block is set to decrease geometrically, with a 50% reduction every 210,000 blocks, or about four years. The result is that the number of bitcoins in existence will not exceed slightly less than 21 million. In 2056, the reward drops from 0.024414 BTC to 0.012207 BTC per block.">2056 - Est. Block Reward</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.012207 BTC</div>
+          </div>
+          <p class="card-btn-row"><a href="https://en.bitcoin.it/wiki/Controlled_supply" target="_blank" rel="nofollow" title="Learn more about Bitcoin halving events and controlled supply at Bitcoin Wiki." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">API Providers</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-database" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Bitcoin prices powered by the industry's top APIs</p>
+          <div class="Rtable Rtable--2cols">
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Coincap is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://coincap.io/" target="_blank">CoinCap</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,598.19 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Blockchain.com is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://blockchain.com/" target="_blank">Blockchain.com</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$55,657.51 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Messari is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://messari.io/" target="_blank">Messari</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,378.98 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="CryptoCompare is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://cryptocompare.com/" target="_blank">CryptoCompare</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,393.76 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="CoinGecko is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://www.coingecko.com/en" target="_blank">CoinGecko</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,618.00 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="CoinDesk is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://www.coindesk.com/" target="_blank">CoinDesk</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,559.02 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitstamp is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://www.bitstamp.net/" target="_blank">Bitstamp</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,602.00 BTC~USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="SmartBit is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://www.smartbit.com.au/" target="_blank">SmartBit</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,638.00 BTC~USD</div>
+                <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Blockchair is an industry-leading API provider. An API (Application Programming Interface) is a computing interface which defines interactions between multiple software intermediaries. It defines the kinds of calls or requests that can be made and other data communication technicals."><a href="https://www.blockchair.com/" target="_blank">Blockchair</a></button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$54,638.00 BTC~USD</div>
+          </div>
+          <p class="card-btn-row"><a href="https://en.wikipedia.org/wiki/API" target="_blank" rel="nofollow" title="Learn more about data APIs at Wikipedia.org." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Highs and Lows</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-arrows-v" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Datapoints from the current epoch</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin's all-time high price in USD">All-Time High (ATH)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$58,641.00 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The date when Bitcoin's all-time high price occurred">All-Time High Date</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">2021-02-21T19:00:00Z</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Count of days since Bitcoin's all-time high price">Days Since ATH</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">16 Days</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Change percentage from ATH to current price">% Change From ATH</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">-6.81%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Bitcoin's current cycle low price in USD">Cycle Low</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$43,200.15 USD</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The date when Bitcoin's current cycle low price occurred">Cycle Low Date</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">2021-02-28T18:00:00Z</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Count of days since Bitcoin's current cycle low price">Days Since Cycle Low</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">9 Days</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Change percentage from cycle low to current price">% Change From Cycle Low</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">26.74%</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="With a Bitcoin epoch people usually mean a period of roughly 4 years with a specific mining reward. The first epoch started with the genesis block in 2009, and a block reward of 50 BTC. The 4th mining epoch runs from May 2020 until some time in 2024.">Current Epoch</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">4th</div>
+          </div>
+          <p class="card-btn-row"><a href="https://web.archive.org/save/https://blog.p2pfoundation.net/the-bitcoin-epoch-it-is-akin-to-the-printing-press-revolution/2011/07/08" target="_blank" rel="nofollow" title="Learn more about Bitcoin epochs at P2PFoundation.org." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">1 BTC Can Buy...</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-shopping-basket" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">What can you buy with 1 Bitcoin?</p>
+          <div class="Rtable Rtable--2cols">
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the cost of a 2020 Lamborghini Aventador (~$420,000 USD - Oct 2020)">Lambos @ $420k</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.13 Lambos</div>
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the average cost of a median U.S. existing house for all home types (single-family, townhomes, condominiums, and co-ops), according to National Association of REALTORS&reg; (NAR) (~$295,000 USD - Jun 2020)">Houses @ $295k</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.18 Houses</div>
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the average cost of a used car in the U.S., according to Kelley Blue Book (~$21,500 USD - Jul 2020)">Used Cars @ $21.5k</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">2.54 Cars</div>
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the cost of one (1) Beta edition 'Black Lotus' card from the Magic: the Gathering trading card game (Currently trading at $40,000.00 USD)">MtG: "Black Lotus" card</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">1.36 Cards</div>
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the cost of 1oz of gold as reported by SwissQuotes Forex Data Feed (Currently trading at $1,712.93 USD)">Gold @ $1,712.93</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">31.85 oz.</div>
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the cost of 1oz of platinum as reported by SwissQuotes Forex Data Feed (Currently trading at $1,164.99 USD)">Platinum @ $1,164.99</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">46.83 oz.</div>
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the cost of 1oz of silver as reported by SwissQuotes Forex Data Feed (Currently trading at $25.88 USD)">Silver @ $25.88</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">2,107.87 oz.</div>
+              <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing one (1) Bitcoin by the cost of one (1) Big Mac hamburger in the U.S. (~$3.99 USD - Oct 2020)">Big Macs @ $3.99 USD</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">13,674 burgers</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing 1 Bitcoin by the cost of one (1) package of Ramen noodles in the U.S. (~$0.25 USD - Oct 2020)">Top Ramen @ $0.25 USD</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">218,236 pkg.</div>
+          </div>
+          <p class="card-btn-row"><a href="https://99bitcoins.com/bitcoin/who-accepts/" target="_blank" rel="nofollow" title="Learn more about where you can spend Bitcoin at 99Bitcoins.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Ownership Economics</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-users" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">How many Bitcoins are available for the world?</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="There are many other cryptocurrency projects but none are Bitcoin, except for BTC... some are forked versions of bitcoin itself (like Litecoin (LTC)), others are completely separate systems and tokens (like Ethereum (ETH)), others are centralized protocols trying to work with banks (XRP), others are cheap clones of Bitcoin (Bitcoin Cash (BCH aka 'BCash' or 'BTrash') and/or Bitcoin SV (BSV aka 'Bitcoin Shit Version' or 'Bitcoin Scam Version')), but the vast majority of so-called 'altcoins' or 'shitcoins' are scams. There is only one true Bitcoin, and the name is 'Bitcoin' or 'BTC'. Anything else (like LTC, ETH, BCH or BSV) is not Bitcoin. Bitcoin = BTC!">Official Bitcoin Symbol</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">"BTC"</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="The general unit structure of bitcoins has 1 bitcoin (BTC) equivalent to 1,000 millibitcoins (mBTC), 1,000,000 microbitcoins (μBTC), or 100,000,000 satoshis (commonly known as 'sats'). Every one (1) Bitcoin contains 100,000,000 individual units ('sats') and can be expressed with 8 decimal places (1.00000000 BTC).">1 BTC contains</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">100,000,000 Sats</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Multiplying Bitcoin's max supply (20,999,999) by the number of individual units ('sats') in every bitcoin (100,000,000)... The resultng number of 2.09 quadrillion units is more money than is currently on Earth and therefore more than enough to use as a functional global currency... even with lost bitcoins.">Max. Units of BTC (Sats)</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">2.09 Quadrillion Sats</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Estimated World Population as reported by World Bank data APIs (2019)">Est. World Population</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">7.67 Billion Humans</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing Bitcoin Max Supply (20,999,999) by ( 2019 World Population / 1000)">Top 0.1% can own</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">2.73667909 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing Bitcoin Max Supply (20,999,999) by ( 2019 World Population / 100)">Top 1% can own</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.27366791 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing Bitcoin Max Supply (20,999,999) by ( 2019 World Population / 10)">Top 10% can own</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.02736679 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Dividing Bitcoin Max Supply (20,999,999) by ( 2019 World Population / 1)">Everyone can own</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">0.00273668 BTC</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft"><button class="lbd-tooltip-btn" title="Multiplying Bitcoins per Person (0.00273668 BTC) by Bitcoin Price ($54,598.19)">0.0027 BTC in USD</button></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight">$149.42 USD</div>
+          </div>
+          <p class="card-btn-row"><a href="https://bitinfocharts.com/top-100-richest-bitcoin-addresses.html" target="_blank" rel="nofollow" title="Learn more about Bitcoin distribution at BitInfoCharts.com." class="lbd-tooltip-btn">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2 disabled">Learn More</button>
+            </a></p>
+        </div>
+      </div>
+    </section>
+    <section id="section-lbd-7" class="light-0 alpha-0">
+      <div class="grid-container-1">
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Live Bitcoin Trades</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-handshake" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">View Bitcoin trades in real-time</p>
+          <!-- Table - Live Trades -->
+          <crypto-widget type="table-trades" template="basic" color="default" assets="BTC~USD" fields="name,type,price,quantity,total,market,trade_date_ago" limit="10" api="cryptocompare.com" realtime="true"></crypto-widget>
+        </div>
+      </div>
+      <div class="grid-container-2">
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Treemap - Coin Market Cap</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-th-large" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Crypto market cap (last 24 hours)</p>
+          <crypto-widget type="treemap" template="red-green" color="default" field="market_cap" limit="50" api="coincap.io" realtime="false"></crypto-widget>
+        </div>
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Treemap - Crypto Prices</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-th-large" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Crypto market prices (last 24 hours)</p>
+          <crypto-widget type="treemap" template="red-green" color="default" field="price" limit="50" api="coincap.io" realtime="false"></crypto-widget>
+        </div>
+      </div>
+      <div class="grid-container-2">
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Treemap - % Change 24h</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-th-large" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Crypto market percent change (last 24 hours)</p>
+          <crypto-widget type="treemap" template="red-green" color="default" field="change_pct_24h" limit="50" api="coincap.io" realtime="false"></crypto-widget>
+        </div>
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Treemap - Volume 24h</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-th-large" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Crypto market volume (last 24 hours)</p>
+          <crypto-widget type="treemap" template="red-green" color="default" field="volume_24h_to" limit="50" api="coincap.io" realtime="false"></crypto-widget>
+        </div>
+      </div>
+    </section>
+    <section id="section-lbd-8" class="dark-0">
+      <div class="grid-container-1">
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">30-day Bitcoin History</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-history" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">Historical Bitcoin price and volume data</p>
+          <crypto-widget type="table-history" template="basic" color="default" assets="BTC~USD" fields="open,high,low,close,date_time" period="1m" pagination="true" rows_per_page="10" sort_field="date_time" sort_direction="desc" api="cryptocompare.com" realtime="false"></crypto-widget>
+        </div>
+      </div>
+
+    </section>
+    <section id="section-lbd-9" class="light-0">
+    <p class="overline-7">BITCOIN RESOURCES</p>
+      <div class="grid-container-3 container">
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">FAQ</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-question-circle" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Frequently asked questions about Bitcoin</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">General Questions</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#what-is-bitcoin" target="_blank" rel="nofollow">What is Bitcoin?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Legal</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#is-bitcoin-legal" target="_blank" rel="nofollow">Is Bitcoin legal?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Economy</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#how-are-bitcoins-created" target="_blank" rel="nofollow">How are Bitcoins created?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Security</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#is-bitcoin-secure" target="_blank" rel="nofollow">Is Bitcoin secure?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Mining</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#what-is-bitcoin-mining" target="_blank" rel="nofollow">What is Bitcoin mining?</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Books</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-book-open" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Learn more about Bitcoin</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Start here</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="nofollow">Bitcoin Whitepaper</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Understanding Money</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://saifedean.com/book/" target="_blank" rel="nofollow">The Bitcoin Standard</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">World Economics</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinandblackamerica.com/" target="_blank" rel="nofollow">Bitcoin &amp; Black America</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">History of Money</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://nakamotoinstitute.org/shelling-out/" target="_blank" rel="nofollow">Shelling Out</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Technical Resources</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://aantonop.com/product/mastering-bitcoin-2nd-edition-ebook/" target="_blank" rel="nofollow">Mastering Bitcoin</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Resources</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-toolbox" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Helpful Bitcoin websites</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Official Website</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org" target="_blank" rel="nofollow">Bitcoin.org</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Information</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://www.lopp.net/bitcoin-information.html" target="_blank" rel="nofollow">Lopp Resources</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Tax Help</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://cointracking.info/" target="_blank" rel="nofollow">CoinTracking</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Data &amp; Metrics</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://www.blockchain.com/explorer" target="_blank" rel="nofollow">Blockchain.info</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Quotes by Satoshi Nakamoto</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://nakamotoinstitute.org/" target="_blank" rel="nofollow">NakamotoInstitute.org</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Fixes This</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-wrench" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Problems solved by Bitcoin via <a href="https://bitcoinfixesthis.com/" target="_blank" rel="nofollow" style="font-size:0.8em;">BitcoinFixesThis.com</a></p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Gold</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/gold" target="_blank" rel="nofollow">By making it digital</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Bank Holidays</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/bank-holidays" target="_blank" rel="nofollow">Markets open 24/7</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Bailouts</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/gold" target="_blank" rel="nofollow">Harder to print money</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Climate Change</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/climate-change" target="_blank" rel="nofollow">Incentivizes renewables</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Inequality</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/inequality" target="_blank" rel="nofollow">Removes Cantillon Effect</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Wallets</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-wallet" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">How to store your bitcoin safely</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Top Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://coldcardwallet.com/" target="_blank" rel="nofollow">ColdCard</a> &nbsp;|&nbsp; <a href="https://opendime.com/" target="_blank" rel="nofollow">OPENDIME</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Hardware Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://trezor.io/" target="_blank" rel="nofollow">Trezor</a> &nbsp;|&nbsp; <a href="https://shapeshift.com/keepkey" target="_blank" rel="nofollow">KeepKey</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Mobile Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://muun.com/" target="_blank" rel="nofollow">Muun</a> &nbsp;|&nbsp; <a href="https://electrum.org/#home" target="_blank" rel="nofollow">Electrum</a> &nbsp;|&nbsp; <a href="https://wallet.mycelium.com/contact.html" target="_blank" rel="nofollow">Mycelium</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Desktop/Web Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/bitcoin-core/" target="_blank" rel="nofollow">Bitcoin Core</a> &nbsp;|&nbsp; <a href="https://electrum.org/#home" target="_blank" rel="nofollow">Electrum</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Physical Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://www.blockark.de/steelwallet/" target="_blank" rel="nofollow">SteelWallet</a> &nbsp;|&nbsp; <a href="https://cryptosteel.com/product/cryptosteel-capsule/" target="_blank" rel="nofollow">CryptoSteel</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Visualizations</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-eye" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Visual representations of Bitcoin data</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Live Node Map</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitnodes.io/nodes/live-map/" target="_blank" rel="nofollow">Bitnodes.io</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Blockchain 3D Explorer</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://blockchain3d.info/" target="_blank" rel="nofollow">Blockchain3D.info</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Transactions 1</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="http://bitcoincity.info/" target="_blank" rel="nofollow">BitcoinCity.info</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Transactions 2</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://txstreet.com/v/btc" target="_blank" rel="nofollow">TXStreet.com</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Transactions 3</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="http://bitcoin.interaqt.nl/" target="_blank" rel="nofollow">Bitcoin.Interaqt.nl</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+      </div>  
+      </section>
+  </div>
+  <div id="News" class="tabcontent">
+    <section id="section-lbd-11" class="light-0 alpha-0">
+      <div class="grid-container-3">
+        <div class="lbd-surface-1 grid-3-l">
+          <div class="l-float-l">
+            <h5 class="card-title-1">News</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-newspaper" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">Stay current with the latest Bitcoin news</p>
+          <crypto-widget type="news-block" template="basic" color="default" limit="10" api="cryptocompare.com" realtime="false"></crypto-widget>
+        </div>
+        <div class="lbd-surface-1">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Today</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-chart-line" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Today's BTC performance</p>
+          <p class="lbd-wdgt">
+            <crypto-widget type="card" template="chart6" color="default" assets="BTC~USD" api="cryptocompare.com" realtime="true" animation="backgroundRedGreen"></crypto-widget>
+          </p>
+          <div class="l-float-l">
+            <h5 class="card-title-1">Comic of the Day</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-newspaper" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">Source: xkcd.com</p>
+          <p><img src="https://imgs.xkcd.com/comics/vaccine_guidance.png" class="flex-img" /></p><br />
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Calculator</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-calculator" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">Calculate bitcoin vs. different currencies</p>
+          <p class="lbd-wdgt">
+            <crypto-widget type="calculator" template="basic2" color="default" api="cryptocompare.com" realtime="true"></crypto-widget>
+          </p>
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Fast Facts</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fa fa-bitcoin" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-2">Talk about Bitcoin at your next dinner party</p>
+          <crypto-widget type="info" template="list" color="default" assets="BTC~USD" fields="logo_name,symbol,description,proof_type,algorithm,difficulty_adjustment,website,twitter,logo,name,features,technology,block_reward_reduction,start_date"></crypto-widget>
+        </div>
+      </div>
+    </section>
+      <section id="section-lbd-9" class="dark-0">
+    <p class="overline-7">BITCOIN RESOURCES</p>
+      <div class="grid-container-3 container">
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">FAQ</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-question-circle" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Frequently asked questions about Bitcoin</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">General Questions</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#what-is-bitcoin" target="_blank" rel="nofollow">What is Bitcoin?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Legal</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#is-bitcoin-legal" target="_blank" rel="nofollow">Is Bitcoin legal?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Economy</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#how-are-bitcoins-created" target="_blank" rel="nofollow">How are Bitcoins created?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Security</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#is-bitcoin-secure" target="_blank" rel="nofollow">Is Bitcoin secure?</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Mining</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/faq#what-is-bitcoin-mining" target="_blank" rel="nofollow">What is Bitcoin mining?</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Books</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-book-open" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Learn more about Bitcoin</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Start here</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="nofollow">Bitcoin Whitepaper</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Understanding Money</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://saifedean.com/book/" target="_blank" rel="nofollow">The Bitcoin Standard</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">World Economics</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinandblackamerica.com/" target="_blank" rel="nofollow">Bitcoin &amp; Black America</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">History of Money</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://nakamotoinstitute.org/shelling-out/" target="_blank" rel="nofollow">Shelling Out</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Technical Resources</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://aantonop.com/product/mastering-bitcoin-2nd-edition-ebook/" target="_blank" rel="nofollow">Mastering Bitcoin</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Resources</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-toolbox" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Helpful Bitcoin websites</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Official Website</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org" target="_blank" rel="nofollow">Bitcoin.org</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Information</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://www.lopp.net/bitcoin-information.html" target="_blank" rel="nofollow">Lopp Resources</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Tax Help</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://cointracking.info/" target="_blank" rel="nofollow">CoinTracking</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Data &amp; Metrics</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://www.blockchain.com/explorer" target="_blank" rel="nofollow">Blockchain.info</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Quotes by Satoshi Nakamoto</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://nakamotoinstitute.org/" target="_blank" rel="nofollow">NakamotoInstitute.org</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Fixes This</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-wrench" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Problems solved by Bitcoin via <a href="https://bitcoinfixesthis.com/" target="_blank" rel="nofollow" style="font-size:0.8em;">BitcoinFixesThis.com</a></p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Gold</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/gold" target="_blank" rel="nofollow">By making it digital</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Bank Holidays</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/bank-holidays" target="_blank" rel="nofollow">Markets open 24/7</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Bailouts</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/gold" target="_blank" rel="nofollow">Harder to print money</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Climate Change</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/climate-change" target="_blank" rel="nofollow">Incentivizes renewables</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin fixes Inequality</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoinfixesthis.com/problem/inequality" target="_blank" rel="nofollow">Removes Cantillon Effect</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Wallets</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-wallet" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">How to store your bitcoin safely</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Top Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://coldcardwallet.com/" target="_blank" rel="nofollow">ColdCard</a> &nbsp;|&nbsp; <a href="https://opendime.com/" target="_blank" rel="nofollow">OPENDIME</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Hardware Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://trezor.io/" target="_blank" rel="nofollow">Trezor</a> &nbsp;|&nbsp; <a href="https://shapeshift.com/keepkey" target="_blank" rel="nofollow">KeepKey</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Mobile Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://muun.com/" target="_blank" rel="nofollow">Muun</a> &nbsp;|&nbsp; <a href="https://electrum.org/#home" target="_blank" rel="nofollow">Electrum</a> &nbsp;|&nbsp; <a href="https://wallet.mycelium.com/contact.html" target="_blank" rel="nofollow">Mycelium</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Desktop/Web Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitcoin.org/en/bitcoin-core/" target="_blank" rel="nofollow">Bitcoin Core</a> &nbsp;|&nbsp; <a href="https://electrum.org/#home" target="_blank" rel="nofollow">Electrum</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Physical Wallets</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://www.blockark.de/steelwallet/" target="_blank" rel="nofollow">SteelWallet</a> &nbsp;|&nbsp; <a href="https://cryptosteel.com/product/cryptosteel-capsule/" target="_blank" rel="nofollow">CryptoSteel</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+        <div class="lbd-surface-1 box" draggable="false">
+          <div class="l-float-l">
+            <h5 class="card-title-1">Bitcoin Visualizations</h5>
+          </div>
+          <div class="r-float-r">
+            <p class="card-icn-1"><i class="fas fa-eye" style="font-size:22px;"></i></p>
+          </div>
+          <p class="subtitle-grey clearboth-1">Visual representations of Bitcoin data</p>
+          <div class="Rtable Rtable--2cols">
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Live Node Map</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://bitnodes.io/nodes/live-map/" target="_blank" rel="nofollow">Bitnodes.io</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Blockchain 3D Explorer</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://blockchain3d.info/" target="_blank" rel="nofollow">Blockchain3D.info</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Transactions 1</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="http://bitcoincity.info/" target="_blank" rel="nofollow">BitcoinCity.info</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Transactions 2</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="https://txstreet.com/v/btc" target="_blank" rel="nofollow">TXStreet.com</a></div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignLeft">Bitcoin Transactions 3</div>
+            <div class="Rtable-cell Rtable-cell--alignMiddle Rtable-cell--alignRight"><a href="http://bitcoin.interaqt.nl/" target="_blank" rel="nofollow">Bitcoin.Interaqt.nl</a></div>
+          </div>
+          <p class="card-btn-row disabled"><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a><a href="#">
+            <button class="button button-2">Learn More</button>
+            </a></p>
+        </div>
+      </div>  
+      </section>
+</div>
+  <section id="section-lbd-13" class="dark-0 lbd-subft"><h1 style="font-size:14px;line-height:18px;color:#777;margin:0;padding:0;"><br/>Learn all about Bitcoin with live bitcoin price data visualizations, like real-time bitcoin quotes and trades, bitcoin price vs. world fiat map, live bitcoin calculator, bitcoin market cap heatmaps, 24-hour BTC charts, cryptocurrency news, bitcoin resources and more.</h1><h6 class='footer-terms'>Data calculated on Tuesday, 09 March 2021  at  9:02:04 pm (America/New_York).  LiveBitcoinData.com is an educational research website. LiveBitcoinData.com does not sell, exchange, transfer or promote any cryptocurrency. LiveBitcoinData.com does not promote or share any affiliate links to any coins, tokens, forks, ICOs, or exchanges of any kind. This website is not intended to provide recommendations and should not be taken as investment advice. Prices are not guaranteed to be accurate. This content is for informational purposes only and does not constitute an offer to sell or the solicitation of an offer to sell or buy any security in any jurisdiction where such an offer or solicitation would be illegal. There is not enough information contained in this content to make an investment decision and any information contained herein should not be used as a basis for this purpose. This content does not constitute a recommendation or take into account the particular investment objectives, financial situations, or needs of investors. Investors are not to construe this content as legal, tax or investment advice, and should consult their own advisors concerning an investment in digital assets. The price and value of assets referred to in this content and the income from them may fluctuate. Past performance is not indicative of the future performance of any assets referred to herein. Fluctuations in exchange rates could have adverse effects on the value or price of, or income derived from, certain investments. LiveBitcoinData.com does not verify any data reported via 3rd-party APIs and disclaims any obligation to do so. Please complete your own comprehensive research before using or investing in any cryptocurrency. Extreme risks exist, such as evolving global regulations; high price volatility; fraudulent actors and/or projects; or the threat of hackers breaking security systems and stealing funds. Any investment could lose significant value at any time. Learn about bitcoin wallets and practice secure storage procedures. LiveBitcoinData.com advocates for the legal and legitimate use of Bitcoin.</h6><p class='footer-terms-2'><strong><i class='fa fa-heart' aria-hidden='true'></i> Bitcoin = BTC</p><p><strong><i class='fa fa-twitter' aria-hidden='true'></i>Follow <a href='https://twitter.com/LiveBitcoinData' target='_blank' rel='nofollow'>@LiveBitcoinData</a></strong></p> 
+                        <div style="padding:0;margin:0;"><button class="btn-lbd-tooltip lbd-tooltip-btn" title="The datapoints and live bitcoin price visualizations on LiveBitcoinData.com are powered by data sourced from the top exchanges and market data providers, such as Coinbase, Kraken, Gemini, Bitstamp, CoinCap, BlockCypher, CryptoCompare, CoinGecko, Messari Crypto, Blockchain.info and more. LiveBitcoinData.com's 'Average Bitcoin Price' metric (seen in the browser tab, preloading screen, and under the header: 'Avg. Bitcoin Price') is calculated by averaging these datapoints. The gauge, world map, exchange quotes and other live data may be provided by CryptoCompare or CoinCap and is different than the 'Average Bitcoin Price' calculated by LiveBitcoinData.com. Bitcoin prices updated in real-time."><span style="font-size:0.6em;color:#a0a0a0;"><sup>*</sup>How is this data calculated?</span></button></div>
+</section>
+</wrapper>
+<footer id="lbd-site-footer">
+  <div class="footer-nav-1">
+    <p class="overline-3">&copy; <script async type="text/javascript">
+      document.write(new Date().getFullYear());</script> LiveBTCdata.com</p>
+    <p class="overline-3 grey-vl">All Data Systems <span class="connect-wrap"><span id="connect-led-1" class="connect-led notconnected" title="OK!"></span></span></p>
+    <p class="overline-3 grey-vl"><a href="https://www.charitywatch.org/top-rated-charities" target="_blank" rel="nofollow">Donate</a></p>
+  </div>
+</footer>
+<script async src="https://livebitcoindata.com/js/vendor/modernizr-3.11.2.min.js"></script> 
+<script async src="https://livebitcoindata.com/js/plugins.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $( document ).tooltip();
+    });
+    </script>
+    <script>
+        $('.lbd-tooltip-btn').tooltip({
+        tooltipClass: "lbd-tooltip-ui",
+        });
+    </script>
+<script src="https://livebitcoindata.com/js/main.js?ver=0.3.51"></script> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RCH34EK30Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RCH34EK30Z');
+</script>
+<script src="https://livebitcoindata.com/lbdbtc/assets/js/dist/app.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){setTimeout(function(){$('body').addClass('loaded');}, 300);});
+</script>
+</body>
+</html>
+

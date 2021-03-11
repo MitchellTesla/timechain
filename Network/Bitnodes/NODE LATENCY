@@ -1,0 +1,39 @@
+$ curl -H "Accept: application/json; indent=4" https://bitnodes.io/api/v1/nodes/208.118.235.190-8333/latency/
+{
+    "daily_latency": [
+        {
+            "t": 1489907700,
+            "v": 111
+        },
+        .
+        .
+        {
+            "t": 1489994100,
+            "v": 111
+        }
+    ],
+    "weekly_latency": [
+        {
+            "t": 1489388400,
+            "v": 111
+        },
+        .
+        .
+        {
+            "t": 1489993200,
+            "v": 111
+        }
+    ],
+    "monthly_latency": [
+        {
+            "t": 1483228800,
+            "v": 0
+        },
+        .
+        .
+        {
+            "t": 1489968000,
+            "v": 110
+        }
+    ]
+}

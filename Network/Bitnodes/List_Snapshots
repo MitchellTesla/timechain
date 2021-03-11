@@ -1,0 +1,22 @@
+$ curl -H "Accept: application/json; indent=4" https://bitnodes.io/api/v1/snapshots/
+{
+    "count": 51583,
+    "next": "https://bitnodes.io/api/v1/snapshots/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "url": "https://bitnodes.io/api/v1/snapshots/1489993827/",
+            "timestamp": 1489993827,
+            "total_nodes": 6498,
+            "latest_height": 458082
+        },
+        .
+        .
+        {
+            "url": "https://bitnodes.io/api/v1/snapshots/1489990915/",
+            "timestamp": 1489990915,
+            "total_nodes": 6473,
+            "latest_height": 458074
+        }
+    ]
+}

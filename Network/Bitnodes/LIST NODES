@@ -1,0 +1,72 @@
+$ curl -H "Accept: application/json; indent=4" https://bitnodes.io/api/v1/snapshots/1489993827/
+{
+    "timestamp": 1489993827,
+    "total_nodes": 6498,
+    "latest_height": 334083,
+    "nodes": {
+        "88.99.167.175:8333": [
+            70015,
+            "/Satoshi:0.14.0/",
+            1489807093,
+            13,
+            458082,
+            "dazzlepod.com",
+            null,
+            "DE",
+            51.2993,
+            9.491,
+            "Europe/Berlin",
+            "AS24940",
+            "Hetzner Online GmbH"
+        ],
+        .
+        .
+        "208.118.235.190:8333": [
+            70015,
+            "/Satoshi:0.14.0/",
+            1489807094,
+            13,
+            458082,
+            "bitcoin1p.fsf.org",
+            "Boston",
+            "US",
+            42.3584,
+            -71.0598,
+            "America/New_York",
+            "AS22989",
+            "Free Software Foundation, Inc."
+        ]
+    }
+}
+
+$ curl -H "Accept: application/json; indent=4" https://bitnodes.io/api/v1/snapshots/latest/?field=coordinates
+{
+    "timestamp": 1489994806,
+    "total_nodes": 6508,
+    "latest_height": 458082,
+    "coordinates": [
+        [
+            55.0411,
+            82.9344
+        ],
+        .
+        .
+        [
+            64.8985,
+            25.5735
+        ]
+    ]
+}
+
+$ curl -H "Accept: application/json; indent=4" https://bitnodes.io/api/v1/snapshots/latest/?field=user_agents
+{
+    "timestamp": 1493786400,
+    "total_nodes": 6773,
+    "latest_height": 464603,
+    "user_agents": [
+        "/BitcoinUnlimited:1.0.1.1(EB0; AD12)/",
+        .
+        .
+        "/Classic:1.2.0(EB3.7)/"
+    ]
+}

@@ -1,0 +1,25 @@
+$ curl -H "Accept: application/json; indent=4" https://bitnodes.io/api/v1/nodes/208.118.235.190-8333/
+{
+    "hostname": "",
+    "address": "208.118.235.190",
+    "status": "UP",
+    "data": [
+        70015,
+        "/Satoshi:0.14.0/",
+        1489807094,
+        13,
+        458082,
+        "bitcoin1p.fsf.org",
+        "Boston",
+        "US",
+        42.3584,
+        -71.0598,
+        "America/New_York",
+        "AS22989",
+        "Free Software Foundation, Inc."
+    ],
+    "bitcoin_address": "",
+    "url": "",
+    "verified": false,
+    "mbps": "1.402840"
+}

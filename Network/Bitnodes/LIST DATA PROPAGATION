@@ -1,0 +1,19 @@
+$ curl -H "Accept: application/json; indent=4" https://bitnodes.io/api/v1/inv/
+{
+    "count": 100000,
+    "next": "https://bitnodes.io/api/v1/inv/?page=2",
+    "previous": null,
+    "results": [
+        {
+            "inv_hash": "8fd8204bd0871c5803154d137a7c3d9f591ed44c8758e3a7e9b27eebb5aeb8e3"
+        },
+        {
+            "inv_hash": "ee1edc3c48b4961bdbf7932998fe2ecab7fec145d209a64f68cef498392a5e1b"
+        },
+        .
+        .
+        {
+            "inv_hash": "7c673999fe04b2f74e69865e507d8436ac93d35d72051c0bb203e336af281ef2"
+        }
+    ]
+}

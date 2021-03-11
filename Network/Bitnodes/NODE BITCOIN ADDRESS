@@ -1,0 +1,9 @@
+$ curl -H "Accept: application/json; indent=4" -d "bitcoin_address=3JqGyB5AWySQNU7ESHMezadYsR5B8zjSQH" -d "url=http://88.99.167.175" https://bitnodes.io/api/v1/nodes/88.99.167.175-8333/
+{
+    "success": true
+}
+
+$ curl -H "Accept: application/json; indent=4" -d "bitcoin_address=3JqGyB5AWySQNU7ESHMezadYsR5B8zjSQH" -d "url=http://[2a01:4f8:212:3b1f::2]" https://bitnodes.io/api/v1/nodes/2a01:4f8:212:3b1f::2-8333/
+{
+    "success": true
+}

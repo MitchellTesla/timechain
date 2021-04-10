@@ -1,7 +1,7 @@
 # BitH@SHT-API
 Live Blockchain Network Analysis API Dashboard integration and Database Analytics for Bitcoin.
 
-for easy access use livebitcoindata.com
+for quick access use one of the livebitcoindata.com links
 
 This repository is for testing purposes and is set up as an example for other cryptocurrencies
 

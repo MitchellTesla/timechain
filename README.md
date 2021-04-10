@@ -1,4 +1,4 @@
-# BitH@SHT-API
+# Bitcoin
 Live Blockchain Network Analysis API Dashboard integration and Database Analytics for Bitcoin.
 
 for quick access use the livebitcoindata.com link under the About section.

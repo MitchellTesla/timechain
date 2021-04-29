@@ -3,6 +3,10 @@ Bitcoin Core integration/staging tree
 
 https://bitcoincore.org
 
+align="center">
+  <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
+</p>
+
 For an immediately usable, binary version of the Bitcoin Core software, see
 https://bitcoincore.org/en/download/.
 

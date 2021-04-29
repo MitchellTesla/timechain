@@ -3,7 +3,7 @@ Live Blockchain Network Analysis API Dashboard integration and Database Analytic
 
 for quick access use the livebitcoindata.com link under the About section.
 
-This repository is for testing purposes and is set up as an example for other cryptocurrencies
+This repository is for reference purposes and is set up as an example for other cryptocurrencies
 
 
 Apache License

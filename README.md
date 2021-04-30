@@ -1,15 +1,11 @@
 # Bitcoin-API
-Live Blockchain Network Analysis API Dashboard integration and Database Analytics for Bitcoin.
 
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
 
-
+Live Blockchain Network Analysis API Dashboard integration and Database Analytics for Bitcoin.
 for quick access use the livebitcoindata.com link under the About section.
-
-
-
 
 This repository is for reference purposes and is set up as an example for other cryptocurrencies
 

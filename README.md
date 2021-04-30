@@ -1,4 +1,4 @@
-# Bitcoin
+# Bitcoin-API
 Live Blockchain Network Analysis API Dashboard integration and Database Analytics for Bitcoin.
 
 <p align="center">

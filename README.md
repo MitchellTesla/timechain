@@ -8,9 +8,6 @@ Live Blockchain Network Analysis API Dashboard integration and Database Analytic
 
 for quick access use the livebitcoindata.com link under the About section.
 
-<p align="center">
-  <img src="rocketman.gif" alt="demo" />
-</p>
 
 
 
@@ -219,3 +216,7 @@ Apache License
    See the License for the specific language governing permissions and
    limitations under the License.
 
+
+<p align="center">
+  <img src="rocketman.gif" alt="demo" />
+</p>

@@ -5,7 +5,7 @@
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
 </p>
 
-This repository serves as a database/library for bitcoin-core integrations research and development for programmers.
+This repository serves as the interactive database/library for bitcoin and core integrations research and development.
 
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />

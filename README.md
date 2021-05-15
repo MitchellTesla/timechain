@@ -201,7 +201,7 @@ Developer Database for Bitcoin-core integrations.
   <img src="rocketman.gif" alt="demo" />
 </p>
 
-   Copyright (c) 2021 Justin Mitchell  Apache 2.0 LICENSE - MIT LICENSE
+   Copyright (c) 2021 Justin Mitchell 
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

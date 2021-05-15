@@ -4,16 +4,18 @@
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
 
-Live Bitcoin Network Analysis API Dashboard and Developer Database for Bitcoin-core and integrations.
-for quick access use the livebitcoindata.com link under the About section.
+Live Bitcoin Network Analysis API Dashboard and Developer Database for Bitcoin-core integrations.
 
-The repository is for reference purposes and is set up as an example for other cryptocurrencies.  It also serves as a database/library for bitcoin-core integrations research and development for programmers.
+For quick access use the website link livebitcoindata.com in the About section.
+
+The repository is for reference purposes and is set up as an example for other cryptocurrencies.  
 
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
 </p>
+It also serves as a database/library for bitcoin-core integrations research and development for programmers.
 
-Apache License
+# Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 

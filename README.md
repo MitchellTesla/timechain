@@ -3,9 +3,8 @@
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
 </p>
 Developer Database for Bitcoin-core integrations.
- For quick access to the interactive dashboard use the website link in the About section.
- 
-The repository serves as the interactive database/library for the bitcoin network and core integrations research and development.
+
+ For quick access to the interactive dashboard use the website link in the About section.  The repository serves as the interactive database/library for the bitcoin network and core integrations research and development.
 
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />

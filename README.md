@@ -1,8 +1,8 @@
 # Live Bitcoin Network Analysis Dashboard 
+Developer Database for Bitcoin-core integrations.
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
 </p>
-Developer Database for Bitcoin-core integrations.
 
  For quick access to the interactive dashboard use the website link in the About section.  The repository serves as the interactive database/library for the bitcoin network and core integrations research and development.
 

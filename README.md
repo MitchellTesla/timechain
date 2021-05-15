@@ -1,5 +1,6 @@
-# Live Bitcoin Network Analysis API Dashboard and Developer Database for Bitcoin-core integrations.
-For quick access to the dashboard use the website link livebitcoindata.com in the About section.
+# Live Bitcoin Network Analysis Dashboard 
+ Developer Database for Bitcoin-core integrations.
+ For quick access to the dashboard use the website link livebitcoindata.com in the About section.
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
 </p>

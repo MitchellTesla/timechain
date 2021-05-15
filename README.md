@@ -10,8 +10,9 @@ for quick access use the livebitcoindata.com link under the About section.
 The repository is for reference purposes and is set up as an example for other cryptocurrencies.  It also serves as a database/library for bitcoin-core integrations research and development for programmers.
 
 <p align="center">
-  <img src="LiveBTCdata_website_snapshot. alt="demo" />
+  <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
 </p>
+
 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/

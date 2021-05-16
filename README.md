@@ -1,5 +1,5 @@
 # Live Bitcoin Network Analysis Dashboard 
-Developer Database for Bitcoin-core integrations and interactive dashboard.
+Developer Database for Bitcoin-core integrations and interactive network analysis dashboard.
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>

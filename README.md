@@ -1,4 +1,4 @@
-# Live Bitcoin Network Analysis Dashboard 
+# 🐝 Hive of the CyberHornets 🐝
 Developer Database for Bitcoin-core integrations and interactive network analysis dashboard.
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />

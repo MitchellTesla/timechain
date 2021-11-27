@@ -184,7 +184,7 @@ Developer Database for Bitcoin-core integrations and interactive network analysi
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-   END OF TERMS AND CONDITIONS
+   END OF TERMS AND CONDITIONS - satoshi was here...
 
    APPENDIX: How to apply the Apache License to your work.
 

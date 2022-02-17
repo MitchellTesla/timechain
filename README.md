@@ -1,9 +1,9 @@
 # 🐝 Hive of the CyberHornets 🐝
-Developer Database for Bitcoin-core integrations and interactive network analysis dashboard.
+***Welcome to the decentralized M̶e̶t̶a̶verse***
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
- For quick access to the interactive dashboard use the website link in the About section.  The repository serves as the interactive database/library for the bitcoin network and core integrations research and development.
+Click the website link in the About section for access to the Timechainstats interactive Dashboard.  This repository serves as a link to the Interactive Dashboard and as a Library for bitcoin core integrations research and development.
 
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
@@ -201,7 +201,7 @@ Developer Database for Bitcoin-core integrations and interactive network analysi
   <img src="rocketman.gif" alt="demo" />
 </p>
 
-   Copyright (c) 2021 Justin Mitchell 
+   Copyright (c) 2021 JUST IN Mitchell 
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.

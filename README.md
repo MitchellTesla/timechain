@@ -1,9 +1,9 @@
 # 🐝 Hive of the CyberHornets 🐝
-***Welcome to the decentralized M̶e̶t̶a̶verse***
+***Welcome to the decentralized M̶e̶t̶a̶verse, Home of the longest chain***
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
-Click the website link in the About section for access to the Timechainstats interactive Dashboard.  This repository serves as a link to the Interactive Dashboard and as a Library for bitcoin core integrations research and development.
+For Research and Development of Bitcoin.  Use the website link in the About section to access Timechainstats interactive Dashboard.
 
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
@@ -184,7 +184,7 @@ Click the website link in the About section for access to the Timechainstats int
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-   END OF TERMS AND CONDITIONS - satoshi was here...
+   END OF TERMS AND CONDITIONS - satoshi was here[...]
 
    APPENDIX: How to apply the Apache License to your work.
 
@@ -197,11 +197,7 @@ Click the website link in the About section for access to the Timechainstats int
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-<p  align="center">
-  <img src="rocketman.gif" alt="demo" />
-</p>
-
-   Copyright (c) 2021 JUST IN Mitchell 
+   Copyright (c) 2021  MitchellTesla - 0xNaka 
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -214,3 +210,4 @@ Click the website link in the About section for access to the Timechainstats int
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+

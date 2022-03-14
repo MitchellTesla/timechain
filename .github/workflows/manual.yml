@@ -10,7 +10,7 @@ on:
     inputs:
       name:
         # Friendly description to be shown in the UI instead of 'name'
-        description: 'Person/Agent to greet'
+        description: 'Person/Agents to greet'
         # Default value if no value is explicitly provided
         default: 'World/Metaverse'
         # Input has to be provided for the workflow to run

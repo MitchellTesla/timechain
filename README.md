@@ -1,5 +1,4 @@
 # 🐝 Hive of the CyberHornets 🐝
-[![CodeQL](https://github.com/MitchellTesla/Timechain-HIVE/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/MitchellTesla/Timechain-HIVE/actions/workflows/codeql-analysis.yml)
 
 ***Welcome to the decentralized M̶e̶t̶a̶verse, Home of the longest chain***
 <p align="center">

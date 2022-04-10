@@ -1,7 +1,7 @@
 # 🐝 Hive of the CyberHornets 🐝
 [![CodeQL](https://github.com/MitchellTesla/Timechain-HIVE/actions/workflows/codeql.yml/badge.svg)](https://github.com/MitchellTesla/Timechain-HIVE/actions/workflows/codeql.yml)
 
-***Welcome to the decentralized M̶e̶t̶a̶verse, Home of the Bitcoin Timechain***
+***Welcome to the decentralized M̶e̶t̶a̶verse, Hive of the CyberHornets***
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>

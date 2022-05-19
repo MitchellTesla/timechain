@@ -1,11 +1,14 @@
 # 🐝 Hive of the CyberHornets 🐝
 [![CodeQL](https://github.com/MitchellTesla/Timechain-HIVE/actions/workflows/codeql.yml/badge.svg)](https://github.com/MitchellTesla/Timechain-HIVE/actions/workflows/codeql.yml)
 
-***Welcome to the decentralized M̶e̶t̶a̶verse, Hive of the CyberHornets***
+***Welcome to the decentralized M̶e̶t̶a̶verse, Home of the longest chain***
 <p align="center">
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
-For Research and Development of Bitcoin.  Use the website link in the About section to access Timechainstats interactive Dashboard.
+
+For more technical information on the Bitcoin Network read the original whitepaper written by Satoshi Nakamoto!
+
+Use the link in the about section to access an interactive dashboard for the Bitcoin Netowork by 2140data
 
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
@@ -186,7 +189,7 @@ For Research and Development of Bitcoin.  Use the website link in the About sect
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-   END OF TERMS AND CONDITIONS - satoshi was here[...]
+   END OF TERMS AND CONDITIONS 
 
    APPENDIX: How to apply the Apache License to your work.
 
@@ -199,7 +202,7 @@ For Research and Development of Bitcoin.  Use the website link in the About sect
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright (c) 2021  MitchellTesla - 0xNaka 
+   Copyright (c) 2021  MitchellTesla - 0xNakamoto 
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -213,3 +216,4 @@ For Research and Development of Bitcoin.  Use the website link in the About sect
    See the License for the specific language governing permissions and
    limitations under the License.
 
+- satoshi lives[...]

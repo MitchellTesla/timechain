@@ -6,9 +6,9 @@
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
 
-For more technical information on the Bitcoin Network read the original whitepaper written by Satoshi Nakamoto!
+For more technical information on the Bitcoin refer to the original whitepaper written by Satoshi Nakamoto.
 
-Use the link in the about section to access timechainstats interactive dashboard for Bitcoin created by 2140data
+Use the link in the about section to access a Timechainstats Interactive Dashboard by 2140data.
 
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
@@ -189,7 +189,7 @@ Use the link in the about section to access timechainstats interactive dashboard
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-   END OF TERMS AND CONDITIONS 
+   END OF TERMS AND CONDITIONS - satoshi lives⚡
 
    APPENDIX: How to apply the Apache License to your work.
 
@@ -202,7 +202,7 @@ Use the link in the about section to access timechainstats interactive dashboard
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright (c) 2021  MitchellTesla - 0xNakamoto 
+   Copyright (c) 2021  MitchellTesla ⚡ 0xNaka
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -215,5 +215,3 @@ Use the link in the about section to access timechainstats interactive dashboard
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
-- satoshi lives[...]

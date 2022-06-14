@@ -6,7 +6,7 @@
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
 
-For more technical information on the Bitcoin refer to the original whitepaper written by Satoshi Nakamoto.
+For technical information on the Bitcoin Network refer to the original whitepaper written by Satoshi Nakamoto.
 
 Use the link in the about section to access a Timechainstats Interactive Dashboard by 2140data.
 

@@ -1,0 +1,55 @@
+{
+
+  "numberofnodes": 17661,
+
+  "numberofnodes30dchange": 0.70719744496408055,
+
+  "numberofchannels": 84605,
+
+  "numberofchannels30dchange": -0.60853118428626374,
+
+  "networkcapacity": 393434767191,
+
+  "networkcapacity30dchange": 0.541376718935993,
+
+  "networkcapacityusd": 83825329.528144613,
+
+  "publicipnodes": 15290,
+
+  "ipv6nodes": 136,
+
+  "tornodes": 12422,
+
+  "newnodes24h": 16,
+
+  "newchannels24h": 172,
+
+  "updatednodes24h": 8065,
+
+  "updatedchannels24h": 73795,
+
+  "layer1capacityratio": 0.00018734988913857143,
+
+  "averagenodecapacity": 0.22277193657833644,
+
+  "averagenodecapacityusd": 4746.3855638961331,
+
+  "averagechannelcapacity": 0.046461464585050245,
+
+  "averagechannelcapacityusd": 989.909358293018,
+
+  "averagenodeagedays": 544.46550925925919,
+
+  "averagechannelagedays": 331.21228009259261,
+
+  "averagechannelpernode": 9.5812241662420021,
+
+  "medianbasefee": 1.0,
+
+  "medianbasefeeusd": 0.0002130603,
+
+  "medianfeerate": 3.7089654123234308E-05,
+
+  "medianfeerateusd": 7.9023328343925374E-09
+
+}

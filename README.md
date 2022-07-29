@@ -8,7 +8,7 @@
 
 For more technical information on the Bitcoin Network, refer to the original whitepaper written by Satoshi Nakamoto.
 
-Use the link in the about section to access a Timechainstats Interactive Dashboard by 2140data.
+You can use the link in the about section to access the Timechainstats Interactive Dashboard by 2140data.
 
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />

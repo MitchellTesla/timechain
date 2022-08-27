@@ -9,6 +9,10 @@
 
 For more technical information on the Bitcoin Network, refer to the original whitepaper written by Satoshi Nakamoto.
 
+<p align="center">
+  <img src="BTC-Cyberhornets-LOGO_TuurDemeester.jpeg" alt="demo" />
+</p>
+
 You can use the link in the about section to access the Timechainstats Interactive Dashboard by 2140data.
 
 <p align="center">

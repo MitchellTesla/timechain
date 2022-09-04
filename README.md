@@ -7,13 +7,16 @@
   <img src="0ff7784184af761d38db3013a4d1584e.gif" alt="demo" />
 </p>
 
-For more technical information on the Bitcoin Network, refer to the original whitepaper written by Satoshi Nakamoto.
+### Bitcoin uses peer-to-peer technology to operate with NO central authority or bank; the management of transactions, and the issuing of bitcoin is carried out collectively by the network. 
+
+### Bitcoin is open-source; it's design is Public, and nobody owns or controls Bitcoin. Through many of these unique properties, everyone can take part.  Bitcoin allows exciting uses that could not be covered by any previous cash/payment system.
+***For more technical information on the Bitcoin Network, refer to the original whitepaper written by Satoshi Nakamoto in [docs] repo.***
 
 <p align="center">
   <img src="BTC-Cyberhornets-LOGO_TuurDemeester.jpeg" alt="demo" />
 </p>
 
-You can use the link in the about section to access the Timechainstats Interactive Dashboard by 2140data.
+### Use the link in the about section to access the Timechainstats Interactive Dashboard by 2140data.
 
 <p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
@@ -194,7 +197,7 @@ You can use the link in the about section to access the Timechainstats Interacti
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-   END OF TERMS AND CONDITIONS - satoshi lives⚡
+   END OF TERMS AND CONDITIONS - Satoshi Lives⚡
 
    APPENDIX: How to apply the Apache License to your work.
 

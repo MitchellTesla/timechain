@@ -13,14 +13,10 @@
 ***For more technical information on the Bitcoin Network, refer to the original whitepaper written by Satoshi Nakamoto in [docs] repo.***
 
 <p align="center">
-  <img src="BTC-Cyberhornets-LOGO_TuurDemeester.jpeg" alt="demo" />
-</p>
-
-### Use the link in the about section to access the Timechainstats Interactive Dashboard by 2140data.
-
-<p align="center">
   <img src="LiveBTCdata_website_snapshot.jpg" alt="demo" />
 </p>
+
+### Click the link in the about section to access the Timechainstats Interactive Dashboard by 2140data 
 
 # Apache License
                            Version 2.0, January 2004
@@ -197,7 +193,7 @@
       incurred by, or claims asserted against, such Contributor by reason
       of your accepting any such warranty or additional liability.
 
-   END OF TERMS AND CONDITIONS - Satoshi Lives⚡
+   END OF TERMS AND CONDITIONS - Satoshi Lives
 
    APPENDIX: How to apply the Apache License to your work.
 

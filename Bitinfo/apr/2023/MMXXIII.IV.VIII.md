@@ -1,4 +1,4 @@
-# Timechain ⚡ ₿itcoin ( April 07, 2023 )
+# Timechain ⚡ ₿itcoin ( April 08, 2023 )
 
 ### Block Count = 784,530 (2023-04-08 14:08:08)
     Sum of all currently existing Bitcoin = 19,340,347 BTC

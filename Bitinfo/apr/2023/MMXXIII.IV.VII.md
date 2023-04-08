@@ -79,4 +79,4 @@ Tweets per day #Bitcoin	~ 198,796
 
 Homepage	https://bitcoin.org/
 
-中本
+[中本]

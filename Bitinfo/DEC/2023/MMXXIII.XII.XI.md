@@ -29,6 +29,7 @@
 - 1 EUR = 0.000026 BTC
 - 1 RUB = 0.00000027 BTC
 - 1 JPY = 0.00000016 BTC
+  
 # Block Height @ Timestamp
 ### Height ~ Time ~ Trans-ns ~ Sum ~ Reward
     820733	2023-12-11 12:17:02	3751	11,862.45450443 BTC	6.25 BTC
@@ -78,4 +79,4 @@ Reddit subscribers	~  5,960,966
 
 Homepage	https://bitcoin.org/
 
-中本  
+中本

@@ -1,6 +1,6 @@
 #  Timechain ⚡ ₿itcoin - January 24, 2024
 ### Block Count = 827,183 (2024-01-24 15:01:42)
-    Sum of all currently existing Bitcoin)	19,606,825 BTC
+    Sum of all currently existing Bitcoin = 19,606,825 BTC
     Market Capitalization = $778,822,916,624
 ### Bitcoin Price ( 1 BTC = 1 BTC )
 	1 BTC = 39,722.03 USD (2024-01-24 15:03:57)
@@ -22,6 +22,7 @@
 - 1 EUR = 0.000027 BTC
 - 1 RUB = 0.00000029 BTC
 - 1 JPY = 0.00000017 BTC
+  
 # Block Height @ Timestamp
 ### Height ~ Time ~ Trans-ns ~ Sum ~ Reward
     827183	2024-01-24 15:01:42	2763	13,076.37769187 BTC	6.25 BTC

@@ -65,7 +65,7 @@ Bitcoin Mining Profitability = 0.055 USD/Day for 1 THash/s
     Median Transaction Value = 0.0023 BTC ($159.8)
 ### Avg. Transaction Fee = 0.000059 BTC ($4.05) 38.2 sats/vB
     Median Transaction Fee = 0.000032 BTC ($2.18) 20.5 sats/vB
-### Blockchain Size (Bitcoin database size)	491.50 GB
+### Timechain Size (Bitcoin database size)	491.50 GB
 Reddit subscribers	5,960,966
 # Github release	v27.0 (2024-04-16)
 ### Github stars	76640
